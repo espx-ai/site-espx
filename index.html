@@ -131,9 +131,13 @@
     </div>
   </section>
 
-  <footer>
-    <p>© 2025 ESPX. Todos os direitos reservados.</p>
-  </footer>
+    <footer>
+      <p>© 2019–<span id="ano-atual"></span> ESPX Soluções em Tecnologia da Informação. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+      document.getElementById("ano-atual").textContent = new Date().getFullYear();
+    </script>
 
   <a class="whatsapp-button" href="https://wa.me/5521967090786" target="_blank">
     💬 WhatsApp
