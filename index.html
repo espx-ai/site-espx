@@ -1,0 +1,1472 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Soluções com IA que aumentam resultados, reduzem custos e automatizam o atendimento. ESPX é sua parceira para a nova era digital.">
+  <link rel="icon" href="assets/favicon.ico">
+  <title>ESPX - Soluções Inteligentes para seu Negócio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  /*<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">*/
+  <link rel="stylesheet" href="fontawesome/css/all.min.css">
+  <style>
+    :root {
+      --primary-dark: #1e2157; /*#1a237e;*/
+      --primary: #1e2157; /*#303f9f;*/
+      --primary-light: #1e2157; /*#3f51b5;*/
+      --accent: #ef7b25;
+      --accent-light: #ef7b25;
+      --text-dark: #1e2157; /*#212121;*/
+      --text-medium: #757575; /*#424242;*/
+      --text-light: #757575;
+      --background: #f9fafc;
+      --white: #ffffff;
+      --shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+      --transition: all 0.3s ease;
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--text-medium);
+      background: var(--background);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+    
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Montserrat', sans-serif;
+      color: var(--text-dark);
+      font-weight: 600;
+      line-height: 1.3;
+    }
+    
+    a {
+      text-decoration: none;
+      color: inherit;
+      transition: var(--transition);
+    }
+    
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    
+    .btn {
+      display: inline-block;
+      padding: 14px 28px;
+      background: var(--primary);
+      color: var(--white);
+      border-radius: 6px;
+      font-weight: 500;
+      font-size: 1rem;
+      border: none;
+      cursor: pointer;
+      transition: var(--transition);
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(48, 63, 159, 0.2);
+    }
+    
+    .btn:hover {
+      background: var(--primary-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 15px rgba(48, 63, 159, 0.25);
+    }
+    
+    .btn-accent {
+      background: var(--accent);
+      box-shadow: 0 4px 12px rgba(255, 152, 0, 0.2);
+    }
+    
+    .btn-accent:hover {
+      background: #f57c00;
+      box-shadow: 0 6px 15px rgba(255, 152, 0, 0.25);
+    }
+    
+    .btn-outline {
+      background: transparent;
+      border: 2px solid var(--primary);
+      color: var(--primary);
+      box-shadow: none;
+    }
+    
+    .btn-outline:hover {
+      background: var(--primary);
+      color: var(--white);
+    }
+    
+    /* Header */
+    .header {
+      background: var(--white);
+      box-shadow: var(--shadow);
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+      padding: 15px 0;
+      transition: var(--transition);
+    }
+    
+    .header.scrolled {
+      padding: 10px 0;
+    }
+    
+    .header-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+    
+    .logo img {
+      height: 60px;
+      transition: var(--transition);
+    }
+    
+    .header.scrolled .logo img {
+      height: 40px;
+    }
+    
+    .nav {
+      display: flex;
+      align-items: center;
+    }
+    
+    .nav-links {
+      display: flex;
+      list-style: none;
+      margin-right: 20px;
+    }
+    
+    .nav-links li {
+      margin-left: 30px;
+    }
+    
+    .nav-links a {
+      color: var(--text-medium);
+      font-weight: 500;
+      position: relative;
+    }
+    
+    .nav-links a:hover {
+      color: var(--primary);
+    }
+    
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--primary);
+      transition: var(--transition);
+    }
+    
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+    
+    .mobile-menu-btn {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      color: var(--text-dark);
+      cursor: pointer;
+    }
+    
+    /* Hero Section */
+    .hero {
+      padding: 160px 0 100px;
+      background: linear-gradient(135deg, rgba(26, 35, 126, 0.05) 0%, rgba(255, 152, 0, 0.05) 100%);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -100px;
+      right: -100px;
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, rgba(26, 35, 126, 0.1) 0%, rgba(255, 152, 0, 0.1) 100%);
+      z-index: 0;
+    }
+    
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: -100px;
+      left: -100px;
+      width: 250px;
+      height: 250px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, rgba(255, 152, 0, 0.1) 0%, rgba(26, 35, 126, 0.1) 100%);
+      z-index: 0;
+    }
+    
+    .hero-container {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    
+    .hero-content {
+      max-width: 600px;
+    }
+    
+    .hero-title {
+      font-size: 3rem;
+      margin-bottom: 20px;
+      color: var(--primary-dark);
+    }
+    
+    .hero-title span {
+      color: var(--accent);
+    }
+    
+    .hero-subtitle {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+      color: var(--text-medium);
+    }
+    
+    .hero-cta {
+      display: flex;
+      gap: 15px;
+    }
+    
+    .hero-image {
+      flex: 0 0 30%;
+      position: relative;
+ 
+	}
+
+    .hero-image img {
+      max-width: 80%;
+      max-width: 80%;
+      animation: float 6s ease-in-out infinite;
+    }
+    
+	
+    @keyframes float {
+      0% { transform: translateY(-30px); }
+      50% { transform: translateY(30px); }
+      100% { transform: translateY(-30px); }
+    }
+    
+    /* Stats Section */
+    .stats {
+      padding: 60px 0;
+      background: var(--white);
+    }
+    
+    .stats-container {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    
+    .stat-item {
+      flex: 1;
+      min-width: 200px;
+      text-align: center;
+      padding: 20px;
+      border-radius: 8px;
+      transition: var(--transition);
+    }
+    
+    .stat-item:hover {
+      transform: translateY(-5px);
+    }
+    
+    .stat-number {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .stat-number span {
+      color: var(--accent);
+    }
+    
+    .stat-text {
+      font-size: 1rem;
+      color: var(--text-medium);
+    }
+    
+    /* Services Section */
+    .services {
+      padding: 100px 0;
+      background: var(--background);
+    }
+    
+    .section-header {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+    
+    .section-title {
+      font-size: 2.5rem;
+      margin-bottom: 15px;
+      position: relative;
+      display: inline-block;
+    }
+    
+    .section-title::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 3px;
+      background: var(--accent);
+    }
+    
+    .section-subtitle {
+      font-size: 1.1rem;
+      max-width: 700px;
+      margin: 0 auto;
+      color: var(--text-light);
+    }
+    
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+    
+    .service-card {
+      background: var(--white);
+      border-radius: 12px;
+      padding: 40px 30px;
+      box-shadow: var(--shadow);
+      transition: var(--transition);
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
+    }
+    
+    .service-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 0;
+      background: linear-gradient(135deg, rgba(26, 35, 126, 0.03) 0%, rgba(255, 152, 0, 0.03) 100%);
+      z-index: -1;
+      transition: var(--transition);
+    }
+    
+    .service-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+    
+    .service-card:hover::before {
+      height: 100%;
+    }
+    
+    .service-icon {
+      font-size: 2.5rem;
+      color: var(--accent);
+      margin-bottom: 20px;
+      display: inline-block;
+      transition: var(--transition);
+    }
+    
+    .service-card:hover .service-icon {
+      transform: scale(1.1);
+    }
+    
+    .service-title {
+      font-size: 1.5rem;
+      margin-bottom: 15px;
+      transition: var(--transition);
+    }
+    
+    .service-description {
+      margin-bottom: 20px;
+      color: var(--text-light);
+    }
+    
+    .service-link {
+      display: inline-flex;
+      align-items: center;
+      color: var(--primary);
+      font-weight: 500;
+      transition: var(--transition);
+    }
+    
+    .service-link i {
+      margin-left: 5px;
+      transition: var(--transition);
+    }
+    
+    .service-link:hover {
+      color: var(--accent);
+    }
+    
+    .service-link:hover i {
+      transform: translateX(5px);
+    }
+    
+    /* Process Section */
+    .process {
+      padding: 100px 0;
+      background: linear-gradient(135deg, rgba(26, 35, 126, 0.03) 0%, rgba(255, 152, 0, 0.03) 100%);
+    }
+    
+    .process-steps {
+      display: flex;
+      justify-content: space-between;
+      position: relative;
+      margin-top: 50px;
+    }
+    
+    .process-steps::before {
+      content: '';
+      position: absolute;
+      top: 40px;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: #e0e0e0;
+      z-index: 0;
+    }
+    
+    .process-step {
+      flex: 1;
+      text-align: center;
+      position: relative;
+      z-index: 1;
+      padding: 0 15px;
+    }
+    
+    .step-number {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background: var(--white);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px;
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--primary);
+      border: 2px solid var(--primary);
+      position: relative;
+      transition: var(--transition);
+    }
+    
+    .process-step:hover .step-number {
+      background: var(--primary);
+      color: var(--white);
+      transform: scale(1.1);
+    }
+    
+    .step-title {
+      font-size: 1.3rem;
+      margin-bottom: 10px;
+    }
+    
+    .step-description {
+      font-size: 0.95rem;
+      color: var(--text-light);
+    }
+    
+    /* Demo Section */
+    .demo {
+      padding: 100px 0;
+      background: var(--white);
+    }
+    
+    .demo-container {
+      display: flex;
+      align-items: center;
+      gap: 50px;
+    }
+    
+    .demo-content {
+      flex: 1;
+    }
+    
+    .demo-title {
+      font-size: 2.2rem;
+      margin-bottom: 20px;
+    }
+    
+    .demo-description {
+      margin-bottom: 30px;
+    }
+    
+    .demo-features {
+      margin-bottom: 30px;
+    }
+    
+    .demo-feature {
+      display: flex;
+      align-items: center;
+      margin-bottom: 15px;
+    }
+    
+    .demo-feature i {
+      color: var(--accent);
+      margin-right: 10px;
+      font-size: 1.2rem;
+    }
+    
+    .demo-image {
+      flex: 1;
+      position: relative;
+    }
+    
+    .demo-image img {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: var(--shadow);
+    }
+    
+    /* Testimonials Section */
+    .testimonials {
+      padding: 100px 0;
+      background: var(--background);
+    }
+    
+    .testimonials-container {
+      position: relative;
+    }
+    
+    .testimonial-card {
+      background: var(--white);
+      border-radius: 12px;
+      padding: 40px;
+      box-shadow: var(--shadow);
+      margin: 20px auto;
+      max-width: 800px;
+      position: relative;
+    }
+    
+    .testimonial-card::before {
+      content: '\201C';
+      font-size: 6rem;
+      font-family: Georgia, serif;
+      color: rgba(26, 35, 126, 0.1);
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      line-height: 1;
+    }
+    
+    .testimonial-text {
+      font-size: 1.1rem;
+      margin-bottom: 20px;
+      position: relative;
+      z-index: 1;
+    }
+    
+    .testimonial-author {
+      display: flex;
+      align-items: center;
+    }
+    
+    .author-image {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      margin-right: 15px;
+      overflow: hidden;
+    }
+    
+    .author-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    
+    .author-info h4 {
+      font-size: 1.1rem;
+      margin-bottom: 5px;
+    }
+    
+    .author-info p {
+      font-size: 0.9rem;
+      color: var(--text-light);
+    }
+    
+    /* Contact Section */
+    .contact {
+      padding: 100px 0;
+      background: linear-gradient(135deg, rgba(26, 35, 126, 0.05) 0%, rgba(255, 152, 0, 0.05) 100%);
+    }
+    
+    .contact-container {
+      display: flex;
+      gap: 50px;
+    }
+    
+    .contact-info {
+      flex: 1;
+    }
+    
+    .contact-title {
+      font-size: 2.2rem;
+      margin-bottom: 20px;
+    }
+    
+    .contact-description {
+      margin-bottom: 30px;
+    }
+    
+    .contact-method {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+    
+    .contact-method i {
+      width: 50px;
+      height: 50px;
+      background: var(--primary-light);
+      color: var(--white);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 15px;
+      font-size: 1.2rem;
+    }
+    
+    .contact-method-info h4 {
+      font-size: 1.1rem;
+      margin-bottom: 5px;
+    }
+    
+    .contact-method-info p {
+      font-size: 0.95rem;
+      color: var(--text-medium);
+    }
+    
+    .contact-form {
+      flex: 1;
+      background: var(--white);
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: var(--shadow);
+    }
+    
+    .form-group {
+      margin-bottom: 20px;
+    }
+    
+    .form-label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 500;
+      color: var(--text-dark);
+    }
+    
+    .form-control {
+      width: 100%;
+      padding: 12px 15px;
+      border: 1px solid #e0e0e0;
+      border-radius: 6px;
+      font-family: 'Inter', sans-serif;
+      font-size: 1rem;
+      transition: var(--transition);
+    }
+    
+    .form-control:focus {
+      border-color: var(--primary);
+      outline: none;
+      box-shadow: 0 0 0 3px rgba(63, 81, 181, 0.1);
+    }
+    
+    textarea.form-control {
+      min-height: 120px;
+      resize: vertical;
+    }
+    
+    /* Footer */
+    .footer {
+      background: var(--primary-dark);
+      color: var(--white);
+      padding: 60px 0 20px;
+    }
+    
+    .footer-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 40px;
+      margin-bottom: 40px;
+    }
+    
+    .footer-logo {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+    
+    .footer-logo img {
+      height: 40px;
+      filter: brightness(0) invert(1);
+    }
+    
+    .footer-about p {
+      margin-bottom: 20px;
+      font-size: 0.95rem;
+      opacity: 0.8;
+    }
+    
+    .social-links {
+      display: flex;
+      gap: 15px;
+    }
+    
+    .social-link {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: var(--transition);
+    }
+    
+    .social-link:hover {
+      background: var(--accent);
+      transform: translateY(-3px);
+    }
+    
+    .footer-title {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+      color: var(--white);
+    }
+    
+    .footer-links {
+      list-style: none;
+    }
+    
+    .footer-links li {
+      margin-bottom: 10px;
+    }
+    
+    .footer-links a {
+      opacity: 0.8;
+      transition: var(--transition);
+    }
+    
+    .footer-links a:hover {
+      opacity: 1;
+      color: var(--accent);
+      padding-left: 5px;
+    }
+    
+    .copyright {
+      text-align: center;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      font-size: 0.9rem;
+      opacity: 0.7;
+    }
+    
+    /* WhatsApp Button */
+    .whatsapp-button {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      width: 60px;
+      height: 60px;
+      background: #25d366;
+      color: var(--white);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+      z-index: 999;
+      transition: var(--transition);
+    }
+    
+    .whatsapp-button:hover {
+      transform: scale(1.1);
+      box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+    }
+    
+    .whatsapp-tooltip {
+      position: absolute;
+      right: 75px;
+      background: var(--white);
+      color: var(--text-dark);
+      padding: 8px 15px;
+      border-radius: 6px;
+      font-size: 0.9rem;
+      box-shadow: var(--shadow);
+      opacity: 0;
+      visibility: hidden;
+      transition: var(--transition);
+      white-space: nowrap;
+    }
+    
+    .whatsapp-button:hover .whatsapp-tooltip {
+      opacity: 1;
+      visibility: visible;
+    }
+    
+    /* Responsive Styles */
+    @media (max-width: 1024px) {
+      .hero-title {
+        font-size: 2.5rem;
+      }
+      
+      .process-steps {
+        flex-direction: column;
+        gap: 40px;
+      }
+      
+      .process-steps::before {
+        display: none;
+      }
+      
+      .step-number {
+        margin-bottom: 15px;
+      }
+      
+      .contact-container {
+        flex-direction: column;
+      }
+    }
+    
+    @media (max-width: 768px) {
+      .header-container {
+        position: relative;
+      }
+      
+      .nav-links {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        flex-direction: column;
+        background: var(--white);
+        padding: 20px;
+        box-shadow: var(--shadow);
+        margin: 0;
+        transform: translateY(-10px);
+        opacity: 0;
+        visibility: hidden;
+        transition: var(--transition);
+      }
+      
+      .nav-links.active {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+      }
+      
+      .nav-links li {
+        margin: 15px 0;
+      }
+      
+      .mobile-menu-btn {
+        display: block;
+      }
+      
+      .hero-container {
+        flex-direction: column;
+        text-align: center;
+      }
+      
+      .hero-content {
+        margin-bottom: 40px;
+      }
+      
+      .hero-cta {
+        justify-content: center;
+      }
+      
+      .hero-title {
+        font-size: 2rem;
+      }
+      
+      .section-title {
+        font-size: 2rem;
+      }
+      
+      .demo-container {
+        flex-direction: column;
+      }
+      
+      .testimonial-card {
+        padding: 30px;
+      }
+    }
+    
+    @media (max-width: 576px) {
+      .hero {
+        padding: 140px 0 80px;
+      }
+      
+      .hero-title {
+        font-size: 1.8rem;
+      }
+      
+      .hero-subtitle {
+        font-size: 1rem;
+      }
+      
+      .hero-cta {
+        flex-direction: column;
+        gap: 10px;
+      }
+      
+      .stats-container {
+        flex-direction: column;
+      }
+      
+      .section-title {
+        font-size: 1.8rem;
+      }
+      
+      .service-card {
+        padding: 30px 20px;
+      }
+      
+      .testimonial-card {
+        padding: 25px 20px;
+      }
+      
+      .contact-form {
+        padding: 30px 20px;
+      }
+      
+      .whatsapp-button {
+        width: 50px;
+        height: 50px;
+        font-size: 1.3rem;
+        bottom: 20px;
+        right: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container header-container">
+      <div class="logo">
+        <img src="assets/espx_logo_full.png" alt="ESPX Logo">
+      </div>
+      <nav class="nav">
+        <ul class="nav-links">
+          <li><a href="#services">Soluções</a></li>
+          <li><a href="#process">Como Trabalhamos</a></li>
+          <li><a href="#demo">Demonstração</a></li>
+          <li><a href="#contact">Contato</a></li>
+        </ul>
+        <a href="#contact" class="btn">Fale Conosco</a>
+      </nav>
+      <button class="mobile-menu-btn">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container hero-container">
+      <div class="hero-content">
+        <h1 class="hero-title">Soluções com <span>Inteligência</span> para o seu Negócio</h1>
+        <p class="hero-subtitle">Tecnologia que simplifica processos e multiplica resultados. Automatize, integre e transforme sua operação com soluções acessíveis e eficientes.</p>
+        <div class="hero-cta">
+          <a href="#contact" class="btn">Fale Conosco</a>
+          <a href="#services" class="btn btn-outline">Conheça nossas soluções</a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <img src="assets/espx_logo.png" alt="Inteligência Artificial">
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Section -->
+  <section class="stats">
+    <div class="container stats-container">
+      <div class="stat-item">
+        <div class="stat-number">40<span>%</span></div>
+        <p class="stat-text">Até 40% de redução no tempo operacional com automações inteligentes<br><small><em>(Fonte: McKinsey)</em></small></p>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">35<span>%</span></div>
+        <p class="stat-text">Aumento médio de 35% nas conversões com uso de IA nos funis de vendas<br><small><em>(Fonte: HubSpot, Salesforce)</em></small></p>
+		      </div>
+      <div class="stat-item">
+        <div class="stat-number">20<span>+</span></div>
+        <p class="stat-text">Mais de 20 integrações com plataformas essenciais<br><small><em>(WhatsApp, Instagram, Google Calendar, Gmail, Excel, Calendly, Pipefy, CRM, ERP etc.)</em></small></p>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">24<span>/7</span></div>
+        <p class="stat-text">Rotinas automatizadas e Agentes de IA trabalhando para vender mais por você<br><small><em>(Atendimento rápido, certeiro e sem descanso)</em></small></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="services">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Nossas Soluções</h2>
+        <p class="section-subtitle">Tecnologias inteligentes que transformam a maneira como seu negócio opera e se conecta com clientes.</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-robot"></i>
+          </div>
+          <h3 class="service-title">Agentes de IA</h3>
+          <p class="service-description">Atenda com velocidade e empatia. Nossos Agentes de IA entendem o seu cliente, aprendem com cada conversa e respondem de forma humana, inteligente e instantânea mesmo enquanto você dorme.</p>
+          <a href="#contact" class="service-link">Saiba mais <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-cogs"></i>
+          </div>
+          <h3 class="service-title">Integrações</h3>
+          <p class="service-description">Tudo conectado, sem dor de cabeça. Integramos com as ferramentas que você já usa como WhatsApp, Instagram, Google Agenda, Sistemas de vendas e gestão. Menos esforço, mais resultado.</p>
+          <a href="#contact" class="service-link">Saiba mais <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-chart-line"></i>
+          </div>
+          <h3 class="service-title">Performance</h3>
+          <p class="service-description">Resultados que aparecem no caixa. Aumente conversões, reduza custos operacionais e acompanhe tudo em tempo real. A IA trabalha, e você colhe os lucros.</p>
+          <a href="#contact" class="service-link">Saiba mais <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-brain"></i>
+          </div>
+          <h3 class="service-title">Estratégia</h3>
+          <p class="service-description">Cada negócio é único por isso, nossa estratégia também é. Aplicamos inteligência de dados e experiência prática para criar soluções sob medida, com foco no que realmente move sua empresa.</p>
+          <a href="#contact" class="service-link">Saiba mais <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process Section -->
+  <section id="process" class="process">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Como Trabalhamos</h2>
+        <p class="section-subtitle">Um processo simples e eficiente para transformar sua operação com inteligência artificial.</p>
+      </div>
+      <div class="process-steps">
+        <div class="process-step">
+          <div class="step-number">1</div>
+          <h3 class="step-title">Diagnóstico Inteligente</h3>
+          <p class="step-description">Analisamos sua operação atual e identificamos, de forma precisa, onde a Inteligência Artificial pode gerar mais impacto e retorno imediato.</p>
+        </div>
+        <div class="process-step">
+          <div class="step-number">2</div>
+          <h3 class="step-title">Estratégia Sob Medida</h3>
+          <p class="step-description">Criamos um plano exclusivo para o seu negócio nada de soluções genéricas. Cada ação é pensada para acelerar seus resultados reais.</p>
+        </div>
+        <div class="process-step">
+          <div class="step-number">3</div>
+          <h3 class="step-title">Implantação Suave</h3>
+          <p class="step-description">Integramos tudo com agilidade, respeitando sua rotina atual. Sem complicações técnicas e com acompanhamento próximo da nossa equipe.</p>
+        </div>
+        <div class="process-step">
+          <div class="step-number">4</div>
+          <h3 class="step-title">Otimização Contínua</h3>
+          <p class="step-description">Monitoramos em tempo real, ajustando as estratégias para extrair o máximo da sua IA. Melhoria constante, sem que você precise se preocupar.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Demo Section -->
+  <section id="demo" class="demo">
+    <div class="container demo-container">
+      <div class="demo-content">
+        <h2 class="demo-title">Veja como funciona na prática</h2>
+        <p class="demo-description">Nossos agentes de IA transformam a forma como você atende clientes, automatiza tarefas e toma decisões. Veja o que muda na prática:</p>
+        <div class="demo-features">
+          <div class="demo-feature">
+            <i class="fas fa-check-circle"></i>
+            <p>Atendimento inteligente 24/7. Respostas imediatas, personalizadas e sem pausas. Sua empresa ativa o tempo todo, mesmo quando você está offline.</p>
+          </div>
+          <div class="demo-feature">
+            <i class="fas fa-check-circle"></i>
+            <p>Conectado com o que você já usa. Integração nativa com WhatsApp, Site, Instagram e ferramentas como Google Agenda, Planilhas, CRM, entre outras.</p>
+          </div>
+          <div class="demo-feature">
+            <i class="fas fa-check-circle"></i>
+            <p>Análise e otimização contínua com IA em evolução. Monitoramento em tempo real para ajustar rotinas, treinar agentes e garantir que sua automação esteja sempre aprendendo, melhorando e entregando mais resultados.</p>
+          </div>
+          <div class="demo-feature">
+            <i class="fas fa-check-circle"></i>
+            <p>Escalável de verdade. Cresça sem precisar contratar mais gente. A IA acompanha seu ritmo e entrega mais à medida que sua demanda aumenta.</p>
+          </div>
+        </div>
+        <a href="#contact" class="btn">Solicite uma demonstração</a>
+      </div>
+      <div class="demo-image">
+        <img src="assets/time_robos.png" alt="Demonstração de IA">
+      </div>
+    </div>
+  </section>
+
+ <!-- Testimonials Section -->
+<section class="testimonials">
+  <div class="container testimonials-container">
+    <div class="section-header">
+      <h2 class="section-title">O que dizem nossos clientes</h2>
+      <p class="section-subtitle">Empresas que transformaram suas operações com nossas soluções inteligentes.</p>
+    </div>
+
+    <div class="testimonial-slider">
+      <div class="testimonial-slide active">
+        <p class="testimonial-text">"A implementação dos agentes de IA da ESPX transformou completamente nosso atendimento. Reduzimos o tempo de resposta em 70% e aumentamos a conversão em 30%."</p>
+        <div class="testimonial-author">
+          <div class="author-image">
+            <img src="assets/ana.png" alt="Cliente">
+          </div>
+          <div class="author-info">
+            <h4>Ana Oliveira</h4>
+            <p>Marketing Digital</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-slide">
+        <p class="testimonial-text">"A IA da ESPX revolucionou o fluxo de atendimento no consultório. Hoje, não perdemos mais pacientes por falta de resposta."</p>
+        <div class="testimonial-author">
+          <div class="author-image">
+            <img src="assets/camila.jpg" alt="Cliente">
+          </div>
+          <div class="author-info">
+            <h4>Dra. Camila Souza</h4>
+            <p>Clínica Mais Vida</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-slide">
+        <p class="testimonial-text">"Nunca mais perdi leads por falta de tempo. A IA responde, coleta dados e só entra quando o cliente está pronto para fechar."</p>
+        <div class="testimonial-author">
+          <div class="author-image">
+            <img src="assets/joao-carlos.jpg" alt="Cliente">
+          </div>
+          <div class="author-info">
+            <h4>João Carlos</h4>
+            <p>Corretor Imobiliário, João Fernando</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .testimonial-slider {
+    position: relative;
+    overflow: hidden;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  .testimonial-slide {
+    display: none;
+    animation: fade 1s ease-in-out;
+  }
+
+  .testimonial-slide.active {
+    display: block;
+  }
+
+  @keyframes fade {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .testimonial-author {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+  }
+
+  .author-image img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 15px;
+  }
+
+  .author-info h4 {
+    margin: 0;
+    font-weight: bold;
+  }
+
+  .author-info p {
+    margin: 0;
+    font-size: 0.9em;
+    color: #555;
+  }
+</style>
+
+<script>
+  const slides = document.querySelectorAll('.testimonial-slide');
+  let currentSlide = 0;
+
+  function showSlide(index) {
+    slides.forEach((slide, i) => {
+      slide.classList.remove('active');
+      if (i === index) slide.classList.add('active');
+    });
+  }
+
+  function nextSlide() {
+    currentSlide = (currentSlide + 1) % slides.length;
+    showSlide(currentSlide);
+  }
+
+  // Start automatic slider
+  setInterval(nextSlide, 3000); // troca a cada 3 segundos
+</script>
+
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <div class="container contact-container">
+      <div class="contact-info">
+        <h2 class="contact-title">Vamos conversar sobre o futuro do seu negócio</h2>
+        <p class="contact-description">Estamos prontos para ajudar sua empresa a alcançar novos patamares com soluções inteligentes e personalizadas.</p>
+        <div class="contact-method">
+          <i class="fas fa-envelope"></i>
+          <div class="contact-method-info">
+            <h4>Email</h4>
+            <p>contato@espx-ai.com.br</p>
+          </div>
+        </div>
+        <div class="contact-method">
+          <i class="fas fa-phone-alt"></i>
+          <div class="contact-method-info">
+            <h4>WhatsApp</h4>
+            <p>+55 21 96709-0786</p>
+          </div>
+        </div>
+        <div class="contact-method">
+          <i class="fas fa-map-marker-alt"></i>
+          <div class="contact-method-info">
+            <h4>Localização</h4>
+            <p>Niterói, RJ - Brasil</p>
+          </div>
+        </div>
+      </div>
+    <!--  <div class="contact-form">
+        <form id="contactForm">
+          <div class="form-group">
+            <label for="name" class="form-label">Nome</label>
+            <input type="text" id="name" class="form-control" required>
+          </div>
+          <div class="form-group">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" id="email" class="form-control" required>
+          </div>
+          <div class="form-group">
+            <label for="phone" class="form-label">Telefone</label>
+            <input type="tel" id="phone" class="form-control">
+          </div>
+          <div class="form-group">
+            <label for="message" class="form-label">Mensagem</label>
+            <textarea id="message" class="form-control" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-accent">Enviar mensagem</button>
+        </form>
+      </div> -->
+    </div> 
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <div class="footer-about">
+        <div class="footer-logo">
+          <img src="assets/espx_logo_full.png" alt="ESPX Logo">
+        </div>
+        <p>Soluções inteligentes que transformam negócios através da automação, integração e análise de dados.</p>
+        <div class="social-links">
+          <a href="https://linkedin.com/in/thiegobastos/" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://instagram.com/espx.ai/" class="social-link"><i class="fab fa-instagram"></i></a>
+          <a href="https://facebook.com/espx.ia" class="social-link"><i class="fab fa-facebook-f"></i></a>
+        </div>
+      </div>
+      <div class="footer-links-container">
+        <h3 class="footer-title">Soluções</h3>
+        <ul class="footer-links">
+          <li><a href="#services">Agentes de IA</a></li>
+          <li><a href="#services">Integrações</a></li>
+          <li><a href="#services">Performance</a></li>
+          <li><a href="#services">Estratégia</a></li>
+        </ul>
+      </div>
+      <div class="footer-links-container">
+        <h3 class="footer-title">Empresa</h3>
+        <ul class="footer-links">
+          <li><a href="#process">Como Trabalhamos</a></li>
+          <li><a href="#demo">Demonstração</a></li>
+          <li><a href="#contact">Contato</a></li>
+          <li><a href="#">Blog</a></li>
+        </ul>
+      </div>
+      <div class="footer-links-container">
+        <h3 class="footer-title">Legal</h3>
+        <ul class="footer-links">
+          <li><a href="#">Termos de Uso</a></li>
+          <li><a href="#">Política de Privacidade</a></li>
+          <li><a href="#">Cookies</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container">
+      <div class="copyright">
+        <p>© 2019–<span id="ano-atual"></span> ESPX Soluções em Tecnologia da Informação. Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Button -->
+  <a href="https://wa.me/5521967090786" target="_blank" class="whatsapp-button">
+    <i class="fab fa-whatsapp"></i>
+    <span class="whatsapp-tooltip">Resposta rápida</span>
+  </a>
+
+  <!-- JavaScript -->
+  <script>
+    // Mobile Menu Toggle
+    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    const navLinks = document.querySelector('.nav-links');
+    
+    mobileMenuBtn.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+    
+    // Header Scroll Effect
+    const header = document.querySelector('.header');
+    
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    });
+    
+    // Smooth Scrolling for Anchor Links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        
+        const targetId = this.getAttribute('href');
+        if (targetId === '#') return;
+        
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+          window.scrollTo({
+            top: targetElement.offsetTop - 80,
+            behavior: 'smooth'
+          });
+          
+          // Close mobile menu if open
+          navLinks.classList.remove('active');
+        }
+      });
+    });
+    
+    // Form Submission
+    //const contactForm = document.getElementById('contactForm');
+    
+    //contactForm.addEventListener('submit', function(e) {
+     // e.preventDefault();
+      
+      // Get form values
+      //const name = document.getElementById('name').value;
+      //const email = document.getElementById('email').value;
+      //const phone = document.getElementById('phone').value;
+      //const message = document.getElementById('message').value;
+      
+      // Here you would typically send the form data to a server
+      // For now, we'll just show an alert
+      //alert(`Obrigado ${name}! Sua mensagem foi enviada com sucesso. Entraremos em contato em breve.`);
+      
+      // Reset form
+      //contactForm.reset();
+    //});
+    
+    // Animation on Scroll (simple version)
+    const animateOnScroll = () => {
+      const elements = document.querySelectorAll('.service-card, .process-step, .stat-item');
+      
+      elements.forEach(element => {
+        const elementPosition = element.getBoundingClientRect().top;
+        const screenPosition = window.innerHeight / 1.3;
+        
+        if (elementPosition < screenPosition) {
+          element.style.opacity = '1';
+          element.style.transform = 'translateY(0)';
+        }
+      });
+    };
+    
+    // Set initial styles for animation
+    document.querySelectorAll('.service-card, .process-step, .stat-item').forEach(element => {
+      element.style.opacity = '0';
+      element.style.transform = 'translateY(20px)';
+      element.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+    });
+    
+    // Run animation on load and scroll
+    window.addEventListener('load', animateOnScroll);
+    window.addEventListener('scroll', animateOnScroll);
+	//ano
+	document.getElementById("ano-atual").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
