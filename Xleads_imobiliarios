@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Encontre seu imóvel com ajuda inteligente — ESPX Parceiros</title>
+  <meta name="description" content="Buscando comprar ou alugar? Conectamos você às melhores oportunidades com apoio de corretores e imobiliárias parceiras da sua região. Atendimento com IA + automação para responder rápido e encaminhar seu pedido com segurança (LGPD)." />
+  <meta property="og:title" content="Encontre seu imóvel com ajuda inteligente" />
+  <meta property="og:description" content="Conte o que procura e nós conectamos você aos parceiros certos — corretores e imobiliárias especializadas na sua região." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="logx.png" />
+  <link rel="icon" href="logx.png" />
+  <style>
+    :root{--blue:#1e2157;--orange:#ef7b25;--g900:#212121;--g700:#5d5d5d;--g500:#8a8a8a;--g50:#f7f9fc;--white:#fff;--maxw:1100px;--shadow1:0 10px 24px rgba(0,0,0,.08);--shadow2:0 20px 44px rgba(0,0,0,.12);--r-xl:22px;--r-lg:16px}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;color:var(--g900);background:var(--g50);-webkit-font-smoothing:antialiased}
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block}
+    .container{max-width:var(--maxw);margin:0 auto;padding:0 20px}
+    .h{position:sticky;top:0;z-index:40;background:rgba(255,255,255,.86);backdrop-filter:saturate(140%) blur(10px);border-bottom:1px solid rgba(0,0,0,.06)}
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:10px 0}
+    .brand{display:flex;align-items:center;gap:10px;font-weight:800}
+    .brand img{width:40px;height:40px;border-radius:10px}
+    .brand span{color:var(--blue)}
+    .btn,.btn-o{display:inline-flex;align-items:center;gap:8px;padding:14px 20px;border-radius:999px;font-weight:800;font-size:15px;transition:transform .15s ease, box-shadow .2s ease, background .2s ease}
+    .btn{background:var(--orange);color:#fff;box-shadow:var(--shadow1)}
+    .btn:hover{transform:translateY(-1px);box-shadow:var(--shadow2)}
+    .btn-o{border:2px solid var(--blue);color:var(--blue)}
+    .btn-o:hover{background:var(--blue);color:#fff}
+
+    .hero{padding:56px 0 8px}
+    .hero-card{background:#fff;border:1px solid rgba(0,0,0,.06);border-radius:var(--r-xl);box-shadow:var(--shadow2);padding:32px 26px;display:grid;grid-template-columns:1.1fr .9fr;gap:22px;align-items:center}
+    h1{font-size:clamp(26px,4vw,42px);line-height:1.1;color:var(--blue);margin:0 0 10px}
+    .sub{font-size:clamp(16px,2.1vw,19px);color:var(--g700);margin:0 0 12px}
+    .badges{display:flex;flex-wrap:wrap;gap:10px;margin:8px 0}
+    .badge{background:#fff;border:1px solid rgba(0,0,0,.06);border-radius:999px;padding:6px 12px;color:#555;font-weight:700;box-shadow:var(--shadow1);font-size:13px}
+
+    .form-wrap{background:#fff;border:1px solid rgba(0,0,0,.06);border-radius:var(--r-lg);box-shadow:var(--shadow1);padding:18px}
+    .group{display:grid;gap:10px;grid-template-columns:1fr 1fr}
+    .group-1{display:grid;gap:10px}
+    label{font-size:13px;color:#3f3f3f;font-weight:700}
+    input,select,textarea{width:100%;padding:12px;border:1px solid #e2e2e2;border-radius:10px;font-size:15px}
+    textarea{min-height:92px}
+    .consent{display:flex;gap:8px;align-items:flex-start;font-size:12px;color:#555;margin:8px 0}
+    .consent input{margin-top:3px}
+
+    .why{padding:20px 0}
+    .grid-3{display:grid;gap:16px;grid-template-columns:repeat(3,1fr)}
+    .card{background:#fff;border:1px solid rgba(0,0,0,.06);border-radius:var(--r-lg);box-shadow:var(--shadow1);padding:18px}
+    .card h3{margin:0 0 6px;color:var(--blue);font-size:18px}
+
+    .info{padding:6px 0 16px;color:#5b5b5b;font-size:14px}
+    .info b{color:var(--blue)}
+
+    .sticky{position:sticky;bottom:0;z-index:50;background:rgba(255,255,255,.94);backdrop-filter:saturate(120%) blur(8px);border-top:1px solid rgba(0,0,0,.06)}
+    .bar{display:flex;gap:10px;align-items:center;justify-content:center;padding:10px}
+
+    footer{padding:24px 0 80px;color:#616161;text-align:center}
+    .lgpd{font-size:12px;margin-top:8px}
+
+    @media (max-width:1024px){.hero-card{grid-template-columns:1fr}.grid-3{grid-template-columns:1fr 1fr}}
+    @media (max-width:560px){.grid-3{grid-template-columns:1fr}.group{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <header class="h">
+    <div class="container nav">
+      <a class="brand" href="index.html" aria-label="Voltar ao site principal">
+        <img src="logx.png" alt="ESPX Parceiros" />
+        <span>ESPX Parceiros</span>
+      </a>
+      <div class="actions">
+        <a class="btn-o" href="#form">Quero encontrar um imóvel</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <div class="hero-card">
+        <div>
+          <h1>Conte o que você procura e nós encontramos por você</h1>
+          <p class="sub">Trabalhamos com <b>corretores e imobiliárias parceiras</b> da sua região para apresentar <b>oportunidades reais</b> alinhadas ao seu perfil. Atendimento rápido com apoio de <b>IA + automação</b> e cuidado com seus dados (<b>LGPD</b>).</p>
+          <div class="badges">
+            <span class="badge">Casas</span>
+            <span class="badge">Apartamentos</span>
+            <span class="badge">Comerciais</span>
+            <span class="badge">Temporada</span>
+            <span class="badge">Lançamentos</span>
+          </div>
+        </div>
+        <div id="form" class="form-wrap">
+          <form id="leadForm">
+            <div class="group">
+              <div>
+                <label for="nome">Seu nome*</label>
+                <input id="nome" name="nome" required placeholder="Ex.: Ana Silva" />
+              </div>
+              <div>
+                <label for="whats">WhatsApp*</label>
+                <input id="whats" name="whats" required placeholder="(DDD) 9 9999-9999" />
+              </div>
+            </div>
+            <div class="group">
+              <div>
+                <label for="cidade">Cidade/Bairro*</label>
+                <input id="cidade" name="cidade" required placeholder="Ex.: Rio das Ostras — Centro" />
+              </div>
+              <div>
+                <label for="tipo">Tipo de imóvel*</label>
+                <select id="tipo" name="tipo" required>
+                  <option value="">Selecione…</option>
+                  <option>Casa</option>
+                  <option>Apartamento</option>
+                  <option>Comercial</option>
+                  <option>Terreno</option>
+                  <option>Outro</option>
+                </select>
+              </div>
+            </div>
+            <div class="group">
+              <div>
+                <label for="objetivo">Objetivo*</label>
+                <select id="objetivo" name="objetivo" required>
+                  <option value="">Selecione…</option>
+                  <option>Comprar</option>
+                  <option>Alugar</option>
+                  <option>Temporada</option>
+                </select>
+              </div>
+              <div>
+                <label for="faixa">Faixa de preço (R$)*</label>
+                <select id="faixa" name="faixa" required>
+                  <option value="">Selecione…</option>
+                  <option>Até 1.500 (aluguel)</option>
+                  <option>1.501–3.000 (aluguel)</option>
+                  <option>3.001–6.000 (aluguel)</option>
+                  <option>Até 300 mil (compra)</option>
+                  <option>300–600 mil (compra)</option>
+                  <option>600 mil–1,2 mi (compra)</option>
+                  <option>Acima de 1,2 mi</option>
+                </select>
+              </div>
+            </div>
+            <div class="group-1">
+              <div>
+                <label for="detalhes">O que é importante para você?</label>
+                <textarea id="detalhes" name="detalhes" placeholder="Quartos, vagas, pet, mobiliado, proximidades, urgência…"></textarea>
+              </div>
+            </div>
+            <label class="consent">
+              <input id="lgpd" type="checkbox" required />
+              <span>Aceito a <b>Política de Privacidade</b> e autorizo o compartilhamento dos meus dados com <b>corretores e imobiliárias parceiras</b> para retorno sobre imóveis compatíveis. (LGPD)</span>
+            </label>
+            <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:8px">
+              <button type="submit" class="btn">📩 Enviar meu pedido</button>
+              <a id="waLink" class="btn-o" href="https://wa.me/5521935005738" target="_blank" rel="noopener">💬 Prefiro falar no WhatsApp</a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="why">
+    <div class="container grid-3">
+      <div class="card">
+        <h3>Quem somos</h3>
+        <p>Somos a <b>ESPX</b>, uma equipe de tecnologia e dados. Conectamos pessoas a oportunidades imobiliárias com apoio de <b>IA e automações</b>, sempre em parceria com profissionais locais.</p>
+      </div>
+      <div class="card">
+        <h3>Como trabalhamos</h3>
+        <p>Você informa o que procura e nós encaminhamos seu pedido para <b>corretores e imobiliárias parceiras</b> especializadas na região, que farão contato com opções adequadas.</p>
+      </div>
+      <div class="card">
+        <h3>Privacidade e segurança</h3>
+        <p>Tratamos seus dados com responsabilidade, apenas para retornar seu pedido e apresentar opções de imóveis. Você pode solicitar exclusão a qualquer momento.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="info">
+    <div class="container">
+      <p><b>Aviso:</b> a ESPX <b>não atua como corretora</b>. Nosso papel é <b>conectar</b> seu pedido a <b>profissionais parceiros</b> que farão o atendimento comercial de forma transparente e responsável.</p>
+    </div>
+  </section>
+
+  <div class="sticky">
+    <div class="container bar">
+      <a class="btn" href="#form">📩 Enviar meu pedido</a>
+      <a class="btn-o" id="waSticky" href="https://wa.me/5521935005738" target="_blank" rel="noopener">💬 WhatsApp</a>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container">
+      <p>© 2025 ESPX Parceiros</p>
+      <p class="lgpd">LGPD: seus dados são usados apenas para retorno sobre seu pedido de imóveis e contato por parceiros autorizados.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Helper: normaliza telefone (só números)
+    function onlyDigits(s){return (s||'').replace(/\D+/g,'')}
+
+    // Constrói mensagem de WhatsApp com UTM
+    function buildWAText(data){
+      const params = new URLSearchParams(window.location.search);
+      const utm = params.toString();
+      const lines = [
+        'Olá! Quero ajuda para encontrar um imóvel.',
+        `Nome: ${data.nome}`,
+        `WhatsApp: ${data.whats}`,
+        `Cidade/Bairro: ${data.cidade}`,
+        `Tipo: ${data.tipo}`,
+        `Objetivo: ${data.objetivo}`,
+        `Faixa de preço: ${data.faixa}`,
+        data.detalhes? `Detalhes: ${data.detalhes}` : '' ,
+        utm? `UTM: ${utm}` : ''
+      ].filter(Boolean).join('\n')
+      return encodeURIComponent(lines)
+    }
+
+    // Envia formulário -> abre WhatsApp pré-preenchido
+    document.getElementById('leadForm').addEventListener('submit', function(ev){
+      ev.preventDefault()
+      const data = {
+        nome: document.getElementById('nome').value.trim(),
+        whats: document.getElementById('whats').value.trim(),
+        cidade: document.getElementById('cidade').value.trim(),
+        tipo: document.getElementById('tipo').value,
+        objetivo: document.getElementById('objetivo').value,
+        faixa: document.getElementById('faixa').value,
+        detalhes: document.getElementById('detalhes').value.trim()
+      }
+      if(!document.getElementById('lgpd').checked){
+        alert('Para continuar, confirme o consentimento (LGPD).')
+        return
+      }
+      const waBase = 'https://wa.me/5521935005738?text='
+      window.location.href = waBase + buildWAText(data)
+    })
+
+    // Ajusta links de WhatsApp com UTM
+    ;(['waLink','waSticky'].forEach(id=>{
+      const a = document.getElementById(id)
+      if(!a) return
+      const params = new URLSearchParams(window.location.search)
+      const utm = params.toString()
+      const msg = encodeURIComponent('Olá! Vim da página de busca de imóveis da ESPX.' + (utm? ' UTM: '+utm : ''))
+      a.href = 'https://wa.me/5521935005738?text=' + msg
+    }))
+  </script>
+</body>
+</html>
