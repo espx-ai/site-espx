@@ -4,12 +4,15 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Encontre seu imóvel com ajuda inteligente — ESPX Parceiros Imobiliários</title>
-  <meta name="description" content="Buscando comprar ou alugar? Conectamos você às melhores oportunidades com apoio de corretores e imobiliárias parceiras da sua região. Atendimento com IA + automação para responder rápido e encaminhar seu pedido com segurança (LGPD)." />
+
+  <!-- Meta revisada para conversão -->
+  <meta name="description" content="Encontre seu imóvel dos sonhos com corretores e imobiliárias locais de confiança. Opções filtradas para o seu perfil, resposta rápida (IA + automação) e privacidade garantida.">
   <meta property="og:title" content="Encontre seu imóvel com ajuda inteligente" />
   <meta property="og:description" content="Conte o que procura e nós conectamos você aos parceiros certos — corretores e imobiliárias especializadas na sua região." />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="logoX.png" />
   <link rel="icon" href="logoX.png" />
+
   <style>
     :root{--blue:#1e2157;--orange:#ef7b25;--g900:#212121;--g700:#5d5d5d;--g500:#8a8a8a;--g50:#f7f9fc;--white:#fff;--maxw:1100px;--shadow1:0 10px 24px rgba(0,0,0,.08);--shadow2:0 20px 44px rgba(0,0,0,.12);--r-xl:22px;--r-lg:16px}
     *{box-sizing:border-box}
@@ -17,6 +20,7 @@
     a{color:inherit;text-decoration:none}
     img{max-width:100%;display:block}
     .container{max-width:var(--maxw);margin:0 auto;padding:0 20px}
+
     .h{position:sticky;top:0;z-index:40;background:rgba(255,255,255,.86);backdrop-filter:saturate(140%) blur(10px);border-bottom:1px solid rgba(0,0,0,.06)}
     .nav{display:flex;align-items:center;justify-content:space-between;padding:10px 0}
     .brand{display:flex;align-items:center;gap:10px;font-weight:800}
@@ -35,42 +39,32 @@
     .badges{display:flex;flex-wrap:wrap;gap:10px;margin:8px 0}
     .badge{background:#fff;border:1px solid rgba(0,0,0,.06);border-radius:999px;padding:6px 12px;color:#555;font-weight:700;box-shadow:var(--shadow1);font-size:13px}
 
-    .form-wrap{background:#fff;border:1px solid rgba(0,0,0,.06);border-radius:var(--r-lg);box-shadow:var(--shadow1);padding:18px}
+    .form-wrap{background:#fff;border:1px solid rgba(0,0,0,.06);border-radius:var(--r-lg);box-shadow:var(--shadow1);padding:18px; overflow-wrap:anywhere;}
+
     .group{display:grid;gap:10px;grid-template-columns:1fr 1fr}
     .group-1{display:grid;gap:10px}
     label{font-size:13px;color:#3f3f3f;font-weight:700}
     input,select,textarea{width:100%;padding:12px;border:1px solid #e2e2e2;border-radius:10px;font-size:15px}
     textarea{min-height:92px}
-/* Consentimento LGPD – alinhado e acessível */
-.consent{
-  display: grid;
-  grid-template-columns: 18px 1fr;
-  column-gap: 8px;
-  align-items: start;
-  margin: 12px 0 4px;
-  max-width: 100%;
-}
-.consent input{
-  margin-top: 3px;          /* alinha com a primeira linha do texto */
-}
-.consent label{
-  font-size: 12px;
-  color: #555;
-  line-height: 1.45;
-  max-width: 100%;
-}
-.consent a{
-  text-decoration: underline;  /* link visível/acessível */
-}
 
-/* Garante que o texto nunca “vaze” do card em telas estreitas */
-.form-wrap{ overflow-wrap: anywhere; }
-
+    /* Consentimento LGPD – alinhado e acessível */
+    .consent{
+      display:grid;
+      grid-template-columns:18px 1fr;
+      column-gap:8px;
+      align-items:start;
+      margin:12px 0 4px;
+      max-width:100%;
+    }
+    .consent input{ margin-top:3px; }
+    .consent label{ font-size:12px; color:#555; line-height:1.45; max-width:100%; }
+    .consent a{ text-decoration:underline; }
 
     .why{padding:20px 0}
     .grid-3{display:grid;gap:16px;grid-template-columns:repeat(3,1fr)}
     .card{background:#fff;border:1px solid rgba(0,0,0,.06);border-radius:var(--r-lg);box-shadow:var(--shadow1);padding:18px}
     .card h3{margin:0 0 6px;color:var(--blue);font-size:18px}
+    .card ul{margin:8px 0 0 18px}
 
     .info{padding:6px 0 16px;color:#5b5b5b;font-size:14px}
     .info b{color:var(--blue)}
@@ -81,8 +75,14 @@
     footer{padding:24px 0 80px;color:#616161;text-align:center}
     .lgpd{font-size:12px;margin-top:8px}
 
-    @media (max-width:1024px){.hero-card{grid-template-columns:1fr}.grid-3{grid-template-columns:1fr 1fr}}
-    @media (max-width:560px){.grid-3{grid-template-columns:1fr}.group{grid-template-columns:1fr}}
+    @media (max-width:1024px){
+      .hero-card{grid-template-columns:1fr}
+      .grid-3{grid-template-columns:1fr 1fr}
+    }
+    @media (max-width:560px){
+      .grid-3{grid-template-columns:1fr}
+      .group{grid-template-columns:1fr}
+    }
   </style>
 </head>
 <body>
@@ -103,7 +103,12 @@
       <div class="hero-card">
         <div>
           <h1>🏡 Encontre seu imóvel dos sonhos com quem conhece a região</h1>
-          <p class="sub">Você já deu o primeiro passo: está no lugar certo. Aqui você conecta-se a <b>corretores e imobiliárias locais de confiança</b>, prontos para apresentar <b>as melhores oportunidades</b> Rápido, seguro e transparente, com apoio de IA + automação e respeito à sua privacidade (LGPD).</p>
+          <p class="sub">
+            Você já deu o primeiro passo: está no lugar certo. Conectamos você a
+            <b>corretores e imobiliárias locais de confiança</b>, prontos para apresentar
+            <b>as melhores oportunidades</b> em sua região — rápido, seguro e transparente.
+            Com apoio de <b>IA + automação</b> e respeito total à sua privacidade (LGPD).
+          </p>
           <div class="badges">
             <span class="badge">Casas</span>
             <span class="badge">Apartamentos</span>
@@ -112,6 +117,7 @@
             <span class="badge">Lançamentos</span>
           </div>
         </div>
+
         <div id="form" class="form-wrap">
           <form id="leadForm">
             <div class="group">
@@ -121,9 +127,11 @@
               </div>
               <div>
                 <label for="whats">WhatsApp*</label>
-                <input id="whats" name="whats" required placeholder="(DDD) 9 9999-9999" />
+                <input id="whats" name="whats" type="tel" inputmode="tel" autocomplete="tel"
+                       required placeholder="(DDD) 9 9999-9999" />
               </div>
             </div>
+
             <div class="group">
               <div>
                 <label for="cidade">Cidade/Bairro*</label>
@@ -141,6 +149,7 @@
                 </select>
               </div>
             </div>
+
             <div class="group">
               <div>
                 <label for="objetivo">Objetivo*</label>
@@ -174,24 +183,26 @@
                 </select>
               </div>
             </div>
+
             <div class="group-1">
               <div>
                 <label for="detalhes">O que é importante para você?</label>
                 <textarea id="detalhes" name="detalhes" placeholder="Quartos, vagas, pet, mobiliado, proximidades…"></textarea>
               </div>
             </div>
+
+            <!-- Consentimento curto e seguro -->
             <div class="consent">
-            <input id="lgpd" type="checkbox" required />
+              <input id="lgpd" type="checkbox" required />
               <label for="lgpd">
-                Declaro que li e <b>aceito a</b>
+                Li e <b>aceito a</b>
                 <a href="politica_privacidade_clientes_leads.html" target="_blank" rel="noopener noreferrer"><u>Política de Privacidade</u></a>,
-                autorizando uso dos meus dados para contato comercial com parceiros credenciados.
+                autorizando uso dos meus dados para contato com parceiros credenciados.
               </label>
             </div>
 
             <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:8px">
-              <button type="submit" class="btn">👉 Quero receber opções agora</button>
-              
+              <button type="submit" class="btn" aria-label="Enviar meu pedido para receber opções agora">👉 Quero receber opções agora</button>
             </div>
           </form>
         </div>
@@ -199,24 +210,37 @@
     </div>
   </section>
 
+  <!-- Trinca de valor + card emocional reunidos na mesma grid -->
   <section class="why">
     <div class="container grid-3">
       <div class="card">
         <h3>Por que confiar</h3>
-        <p>Na <b>ESPX</b>, acreditamos que escolher um imóvel é muito mais que uma transação: é <b>realizar um projeto de vida</b>. Por isso, unimos <b>tecnologia inteligente e profissionais locais experientes</b>, garantindo a você atendimento humano, confiável e próximo.</p>
+        <p>Na <b>ESPX</b>, escolher um imóvel é <b>realizar um projeto de vida</b>. Por isso, unimos <b>tecnologia inteligente</b> e <b>profissionais locais experientes</b> para oferecer a você atendimento humano, confiável e próximo.</p>
       </div>
+
       <div class="card">
         <h3>Como funciona</h3>
-        <p>Você informa o que procura e nós conectamos sua solicitação a <b>parceiros locais especializados</b>. Você recebe opções já filtradas, sem perda de tempo. Contato rápido e direto com corretores de confiança para agendar visitas e negociar. <b>👉 Simples, rápido e seguro.</b></p>
+        <p>
+          Você informa o que procura e nós conectamos sua solicitação a <b>parceiros locais especializados</b>.
+          Você recebe <b>opções já filtradas</b>, economiza tempo e fala <b>direto com corretores de confiança</b> para visitas e negociação.
+          <b>👉 Simples, rápido e seguro.</b>
+        </p>
       </div>
-       <div class="card">
+
+      <div class="card">
         <h3>Benefício central</h3>
-        <p>✨ Por que escolher a ESPX? Só trabalhamos com parceiros imobiliários confiáveis e credenciados. Você recebe apenas imóveis alinhados ao seu perfil. Atendimento imediato com apoio de tecnologia + acompanhamento humano. Transparência total: seus dados são usados apenas para contato sobre o imóvel.</p>
+        <p>✨ Por que escolher a ESPX?</p>
+        <ul>
+          <li>Parcerias apenas com <b>imobiliárias e corretores credenciados</b>.</li>
+          <li><b>Opções alinhadas ao seu perfil</b> — sem perder tempo.</li>
+          <li><b>Resposta rápida</b> com tecnologia + acompanhamento humano.</li>
+          <li><b>Transparência total</b>: dados usados apenas para seu pedido.</li>
+        </ul>
       </div>
-    </div>
+
       <div class="card">
         <h3>Sonho realizado</h3>
-        <p>Mais do que imóveis, conectamos você a oportunidades reais e a pessoas que vão caminhar junto com você até a conquista da sua casa nova.</p>
+        <p>Mais do que imóveis, conectamos você a <b>oportunidades reais</b> e a pessoas que caminham com você até a conquista da sua casa nova.</p>
       </div>
     </div>
   </section>
@@ -227,17 +251,15 @@
     </div>
   </section>
 
- <div class="sticky">
+  <div class="sticky">
     <div class="container bar">
       <a class="btn" href="#form">👉 Quero receber opções agora</a>
-      
     </div>
   </div>
 
   <footer>
     <div class="container">
       <p>©2025 ESPX Parceiros Imobiliários</p>
-      
     </div>
   </footer>
 
@@ -257,15 +279,15 @@
         `Tipo: ${data.tipo}`,
         `Objetivo: ${data.objetivo}`,
         `Faixa de preço: ${data.faixa}`,
-        data.detalhes? `Detalhes: ${data.detalhes}` : '' ,
-        utm? `UTM: ${utm}` : ''
-      ].filter(Boolean).join('\n')
-      return encodeURIComponent(lines)
+        data.detalhes ? `Detalhes: ${data.detalhes}` : '' ,
+        utm ? `UTM: ${utm}` : ''
+      ].filter(Boolean).join('\\n');
+      return encodeURIComponent(lines);
     }
 
     // Envia formulário -> abre WhatsApp pré-preenchido
     document.getElementById('leadForm').addEventListener('submit', function(ev){
-      ev.preventDefault()
+      ev.preventDefault();
       const data = {
         nome: document.getElementById('nome').value.trim(),
         whats: document.getElementById('whats').value.trim(),
@@ -274,24 +296,24 @@
         objetivo: document.getElementById('objetivo').value,
         faixa: document.getElementById('faixa').value,
         detalhes: document.getElementById('detalhes').value.trim()
-      }
+      };
       if(!document.getElementById('lgpd').checked){
-        alert('Para continuar, confirme o consentimento (LGPD).')
-        return
+        alert('Para continuar, confirme o consentimento (LGPD).');
+        return;
       }
-      const waBase = 'https://wa.me/5521935005738?text='
-      window.location.href = waBase + buildWAText(data)
-    })
+      const waBase = 'https://wa.me/5521935005738?text=';
+      window.location.href = waBase + buildWAText(data);
+    });
 
-    // Ajusta links de WhatsApp com UTM
+    // Ajusta links de WhatsApp com UTM (caso tenham esses IDs na página)
     ;(['waLink','waSticky'].forEach(id=>{
-      const a = document.getElementById(id)
-      if(!a) return
-      const params = new URLSearchParams(window.location.search)
-      const utm = params.toString()
-      const msg = encodeURIComponent('Olá! Vim do anúncio de busca de imóveis da ESPX.' + (utm? ' UTM: '+utm : ''))
-      a.href = 'https://wa.me/5521935005738?text=' + msg
-    }))
+      const a = document.getElementById(id);
+      if(!a) return;
+      const params = new URLSearchParams(window.location.search);
+      const utm = params.toString();
+      const msg = encodeURIComponent('Olá! Vim do anúncio de busca de imóveis da ESPX.' + (utm? ' UTM: '+utm : ''));
+      a.href = 'https://wa.me/5521935005738?text=' + msg;
+    }));
   </script>
 </body>
 </html>
