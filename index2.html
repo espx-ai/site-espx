@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Soluções Inteligentes que Geram Resultados</title>
+  <meta name="description" content="IA + Automação para escalar atendimento, aumentar conversões e reduzir custos. ESPX — soluções acessíveis e estratégicas do primeiro contato ao pós-venda." />
+  <meta name="robots" content="index,follow" />
+  <meta property="og:title" content="ESPX — Soluções Inteligentes" />
+  <meta property="og:description" content="Atendimentos 24/7, Jornadas Personalizadas e Decisões por Dados para Crescer com Eficiência." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="pag1.png" />
+  <meta property="og:locale" content="pt_BR" />
+  <link rel="icon" href="logx.png" />
+
+  <style>
+    :root {
+      --brand-blue: #1e2157;
+      --brand-orange: #ef7b25;
+      --gray-900: #212121;
+      --gray-700: #757575;
+      --gray-50:  #f9fafc;
+      --white:    #ffffff;
+      --shadow-1: 0 10px 25px rgba(0,0,0,.08);
+      --shadow-2: 0 20px 40px rgba(0,0,0,.12);
+      --radius-xl: 20px;
+      --radius-lg: 14px;
+      --radius-md: 10px;
+      --maxw: 1120px;
+    }
+
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      color: var(--gray-900);
+      background:
+        radial-gradient(1200px 600px at 10% -10%, rgba(239,123,37,.12), transparent 60%),
+        radial-gradient(1000px 600px at 90% 0%, rgba(30,33,87,.18), transparent 55%),
+        var(--gray-50);
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;  
+    }
+
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+
+    .container { width: 100%; max-width: var(--maxw); margin: 0 auto; padding: 0 20px; }
+
+    header.site-header {
+      position: sticky; top: 0; z-index: 30;
+      backdrop-filter: saturate(140%) blur(8px);
+      background: rgba(255,255,255,.7);
+      border-bottom: 1px solid rgba(0,0,0,.06);
+    }
+    .nav {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 10px 0;
+    }
+    .brand { display: flex; align-items: center; gap: 12px; font-weight: 700; }
+    .brand img { width: 48px; height: 48px; border-radius: 10px; }
+    .brand span { color: var(--brand-blue); letter-spacing: .2px; }
+    .nav .actions { display: flex; align-items: center; gap: 10px; }
+
+    .btn, .btn-outline {
+      display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+      padding: 12px 18px; border-radius: 999px; font-weight: 600; font-size: 15px;
+      transition: transform .15s ease, box-shadow .2s ease, background .2s ease, color .2s ease;
+      will-change: transform;
+    }
+    .btn { background: var(--brand-orange); color: var(--white); box-shadow: var(--shadow-1); }
+    .btn:hover { transform: translateY(-1px); box-shadow: var(--shadow-2); }
+    .btn-outline { border: 2px solid var(--brand-blue); color: var(--brand-blue); background: transparent; }
+    .btn-outline:hover { background: var(--brand-blue); color: var(--white); }
+
+    .hero {
+      padding: 64px 0 28px;
+    }
+    .hero-card {
+      background: linear-gradient(160deg, rgba(255,255,255,.9), rgba(255,255,255,.86));
+      border: 1px solid rgba(0,0,0,.06);
+      border-radius: var(--radius-xl);
+      padding: 42px 28px; box-shadow: var(--shadow-2);
+      display: grid; grid-template-columns: 1.2fr .8fr; gap: 24px; align-items: center;
+    }
+    .hero-content h1 {
+      font-size: clamp(28px, 4vw, 44px);
+      line-height: 1.1; margin: 0 0 12px; color: var(--brand-blue);
+      letter-spacing: .2px;
+    }
+    .subtitle {
+      font-size: clamp(16px, 2.3vw, 20px);
+      color: var(--gray-700); margin: 0 0 20px;
+    }
+    .hero-ctas { display: flex; gap: 12px; flex-wrap: wrap; }
+
+    .hero-media {
+      display: grid; place-items: center; position: relative;
+    }
+    .hero-media .logo {
+      width: min(480px, 95%);
+      filter: drop-shadow(0 20px 30px rgba(0,0,0,.12));
+      transform: perspective(1200px) rotateY(-8deg) rotateX(2deg);
+      border-radius: 16px;
+    }
+
+    .features { padding: 26px 0 10px; }
+    .grid {
+      display: grid; gap: 18px; 
+      grid-template-columns: repeat(4, minmax(0,1fr));
+    }
+    .card {
+      background: #fff; border: 1px solid rgba(0,0,0,.06);
+      border-radius: var(--radius-lg); padding: 22px; box-shadow: var(--shadow-1);
+      text-align: left; transition: transform .15s ease, box-shadow .2s ease;
+    }
+    .card:hover { transform: translateY(-3px); box-shadow: var(--shadow-2); }
+    .card h3 { margin: 4px 0 8px; font-size: 18px; color: var(--brand-blue); }
+    .card p { margin: 0; color: #333; font-size: 15.5px; }
+
+    footer {
+      padding: 36px 0 90px; color: var(--gray-700);
+    }
+    footer .legal { font-size: 14px; }
+
+    .whatsapp-button {
+      position: fixed; right: 20px; bottom: 20px; z-index: 50;
+      background: #25d366; color: #fff; padding: 14px 18px; border-radius: 999px;
+      box-shadow: 0 10px 24px rgba(0,0,0,.16); font-weight: 700; display: inline-flex; gap: 8px; align-items: center;
+      transition: transform .15s ease;
+    }
+    .whatsapp-button:hover { transform: translateY(-2px); }
+
+    @media (max-width: 980px) {
+      .hero-card { grid-template-columns: 1fr; text-align: left; }
+      .hero-media { order: -1; }
+      .grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
+    }
+    @media (max-width: 560px) {
+      .grid { grid-template-columns: 1fr; }
+      .hero-content h1 { font-size: 26px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      * { transition: none !important; }
+      .hero-media .logo { transform: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="#" aria-label="ESPX — início">
+        <img src="logoX.png" alt="Logo ESPX" />
+        <span>ESPX</span>
+      </a>
+      <div class="actions">
+        <a class="btn-outline" href="mailto:contato@espx-ai.com.br">Contato</a>
+        <a class="btn" href="https://wa.me/5521935005738" target="_blank" rel="noopener noreferrer">Fale no WhatsApp</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <div class="hero-card">
+        <div class="hero-content">
+          <h1>Sua empresa no próximo nível com Inteligência Artificial e Automação</h1>
+          <p class="subtitle">Atendimentos <strong>24/7</strong>, jornadas personalizadas e decisões orientadas por dados para <strong>aumentar conversões</strong>, <strong>elevar o ticket médio</strong> e <strong>crescer com eficiência</strong>. Do Primeiro contato ao Pós-Venda.</p>
+          <div class="hero-ctas">
+            <a class="btn" href="https://wa.me/5521935005738" target="_blank" rel="noopener">Quero o próximo nível</a>
+            <a class="btn-outline" href="mailto:contato@espx-ai.com.br">Fale com a ESPX</a>
+          </div>
+        </div>
+        <div class="hero-media">
+          <img class="logo" src="pag1.png" alt="Visual da ESPX" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="features">
+    <div class="container">
+      <div class="grid">
+        <article class="card">
+          <h3>🤖 Inteligência Artificial</h3>
+          <p><strong>Venda mais</strong> e <strong>fidelize clientes</strong> com atendimentos inteligentes, personalizados e disponíveis <strong>24h</strong>. Diferencie sua marca, <strong>aumente a produtividade</strong> da equipe e <strong>escale resultados</strong>.</p>
+        </article>
+        <article class="card">
+          <h3>⚙️ Automação</h3>
+          <p><strong>Automatize processos</strong> e conecte sistemas sem barreiras: <strong>reduza custos</strong> e amplie sua capacidade de atendimento. <strong>Liberte sua equipe</strong> para inovar, gere <strong>vendas recorrentes e escale</strong> com eficiência. Integrando ERPs, CRMs, WhatsApp e muito mais.</p>
+        </article>
+        <article class="card">
+          <h3>📈 Performance</h3>
+          <p><strong>Aumente conversões</strong>, <strong>acelere processos e reduza custos</strong> com performance que cresce na mesma velocidade do seu negócio.</p>
+        </article>
+        <article class="card">
+          <h3>🧠 Estratégia</h3>
+          <p><strong>Estratégia baseada em dados</strong> e <strong>experiência prática</strong> para gerar diferenciação, <strong>crescimento sustentável</strong> e <strong>decisões assertivas</strong>.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p class="legal">© 2019–<span id="ano-atual"></span> ESPX • <strong>Soluções em Tecnologia da Informação.</strong></p>
+      <p class="legal">© 2025 ESPX • Franqueada <strong>Loccel.</strong></p>      
+    </div>
+  </footer>
+
+  <a class="whatsapp-button" href="https://wa.me/5521935005738" target="_blank" rel="noopener" aria-label="Conversar no WhatsApp">
+    💬 WhatsApp
+  </a>
+
+  <script>
+    document.getElementById('ano-atual').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
