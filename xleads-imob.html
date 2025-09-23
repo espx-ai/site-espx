@@ -277,6 +277,7 @@
         `Cidade/Bairro: ${data.cidade}`,
         `Tipo: ${data.tipo}`,
         `Objetivo: ${data.objetivo}`,
+        `Urgência: ${data.urgencia}`,
         `Faixa de preço: ${data.faixa}`,
         data.detalhes ? `Detalhes: ${data.detalhes}` : '' ,
         utm ? `UTM: ${utm}` : ''
@@ -293,6 +294,7 @@
         cidade: document.getElementById('cidade').value.trim(),
         tipo: document.getElementById('tipo').value,
         objetivo: document.getElementById('objetivo').value,
+        urgencia: document.getElementById('urgencia').value,
         faixa: document.getElementById('faixa').value,
         detalhes: document.getElementById('detalhes').value.trim()
       };
