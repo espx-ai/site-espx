@@ -281,7 +281,7 @@
         `Faixa de preço: ${data.faixa}`,
         data.detalhes ? `Detalhes: ${data.detalhes}` : '' ,
         utm ? `UTM: ${utm}` : ''
-      ].filter(Boolean).join('\\n');
+      ].filter(Boolean).join('\n');
       return encodeURIComponent(lines);
     }
 
