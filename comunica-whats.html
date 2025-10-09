@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Planos ESPX — Comunicação Inteligente no WhatsApp</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{--blue:#1e2157;--orange:#ef7b25}
+  body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;background:#f4f6fb;color:#1e2157}
+  .container{max-width:1100px;margin:0 auto;padding:0 20px}
+  .btn{display:inline-flex;align-items:center;gap:8px;background:#ef7b25;color:#fff;font-weight:700;padding:16px 28px;border-radius:999px;box-shadow:0 6px 18px rgba(0,0,0,.1);text-decoration:none;transition:transform .15s ease, box-shadow .2s ease}
+  .btn:hover{transform:translateY(-2px);box-shadow:0 16px 32px rgba(0,0,0,.15)}
+  /* Cards grid */
+  .grid{display:grid;gap:26px;margin-top:40px;grid-template-columns:repeat(4,1fr)}
+  @media (max-width:1024px){.grid{grid-template-columns:repeat(2,1fr)}}
+  @media (max-width:640px){.grid{grid-template-columns:1fr}}
+  .card{background:#fff;border-radius:18px;box-shadow:0 8px 22px rgba(0,0,0,.06);padding:26px;text-align:left}
+  .card h3{margin:0 0 4px}
+  .price{margin:0;color:#212121}
+  .meta{color:#757575;font-size:14px;margin-top:4px}
+  .desc{margin-top:12px;font-size:15px;color:#444}
+  .list{color:#444;font-size:15px;margin:12px 0 0 18px}
+  .kpi{font-size:14px;margin-top:16px;color:#1e2157;font-weight:600}
+  .kpi span{display:block;font-size:12px;color:#757575}
+  .quote{margin-top:16px;font-style:italic;color:#ef7b25}
+  .plans{background:#f9fafc;padding:60px 0}
+  h2{font-size:clamp(26px,4vw,38px);margin:0 0 8px}
+  .lead{color:#555;font-size:18px;max-width:780px;margin:0 auto}
+</style>
+</head>
+<body>
+  <section class="plans">
+    <div class="container" style="text-align:center">
+      <h2>💬 Planos ESPX — Comunicação Inteligente no WhatsApp</h2>
+      <p class="lead">Você cuida do seu negócio. <b>A ESPX cuida dos seus clientes.</b><br>Automação humanizada e mensagens que geram retorno real — da primeira conversa ao pós-venda.</p>
+    </div>
+
+    <div class="container grid">
+      <!-- START -->
+      <div class="card">
+        <h3 style="color:#16a34a">🟢 Plano Start</h3>
+        <p class="price"><b>R$ 197/mês</b></p>
+        <p class="meta">Até 100 mensagens automáticas/mês<br><b>Custo médio:</b> R$ 1,97</p>
+        <p class="desc">Ideal para começar leve, mantendo o relacionamento sem esforço manual.</p>
+        <ul class="list">
+          <li>100 mensagens automáticas (boas-vindas, lembretes, pós-venda)</li>
+          <li>Textos personalizados pela equipe ESPX</li>
+        </ul>
+        <p class="kpi">📈 A cada 100 mensagens, 8–12 clientes voltam a comprar ou agendar.<span>(Dados 2024 – Meta Business, Bills, Twilio)</span></p>
+        <p class="quote">“Poucas mensagens. Resultados reais.”</p>
+      </div>
+
+      <!-- PLUS -->
+      <div class="card">
+        <h3 style="color:#2563eb">🔵 Plano Plus</h3>
+        <p class="price"><b>R$ 297/mês</b></p>
+        <p class="meta">Até 200 mensagens automáticas/mês<br><b>Custo médio:</b> R$ 1,48</p>
+        <p class="desc">Comunicação mais ativa e estratégica, enviada no momento certo.</p>
+        <ul class="list">
+          <li>200 mensagens automáticas (lembretes, promoções, retornos)</li>
+          <li>Segmentação leve por tipo de cliente ou ação</li>
+        </ul>
+        <p class="kpi">📈 A cada 200 mensagens, 16–28 clientes retornam ou compram novamente.<span>(Dados 2024 – Meta Business, Bills, Twilio)</span></p>
+        <p class="quote">“A ESPX fala com seus clientes no momento certo.”</p>
+      </div>
+
+      <!-- PREMIUM -->
+      <div class="card">
+        <h3 style="color:#ea580c">🟠 Plano Premium</h3>
+        <p class="price"><b>R$ 497/mês</b></p>
+        <p class="meta">Até 400 mensagens automáticas/mês<br><b>Custo médio:</b> R$ 1,24</p>
+        <p class="desc">Comunicação contínua — a ESPX assume relacionamento e fidelização.</p>
+        <ul class="list">
+          <li>400 mensagens mensais (promoções, retornos, feedbacks)</li>
+          <li>Personalização completa de textos e campanhas</li>
+          <li>Ajustes estratégicos mensais conforme resultados</li>
+        </ul>
+        <p class="kpi">📈 A cada 400 mensagens, 30–60 clientes voltam a comprar ou interagir.<span>(Dados 2024 – Meta Business, Bills, Twilio)</span></p>
+        <p class="quote">“Enquanto você trabalha, a ESPX faz seus clientes voltarem.”</p>
+      </div>
+
+      <!-- ENTERPRISE -->
+      <div class="card">
+        <h3 style="color:#000">⚫ Plano Enterprise</h3>
+        <p class="price"><b>A partir de R$ 797/mês</b></p>
+        <p class="meta">Volume sob medida (800+ mensagens/mês)<br><b>Custo médio:</b> R$ 1,00 ou menos</p>
+        <p class="desc">Para grandes bases ou múltiplas unidades. Comunicação em escala com time dedicado.</p>
+        <ul class="list">
+          <li>Estratégia personalizada de comunicação</li>
+          <li>Mensagens ilimitadas sob demanda</li>
+          <li>Suporte dedicado e consultoria comercial mensal</li>
+        </ul>
+        <p class="kpi">📈 A cada 800 mensagens, 60–120 clientes reagem, voltam ou compram.<span>(Dados 2024 – Meta Business, Bills, Twilio)</span></p>
+        <p class="quote">“Soluções sob medida para quem quer escalar com inteligência.”</p>
+      </div>
+    </div>
+
+    <div class="container" style="text-align:center;margin-top:40px">
+      <a class="btn" href="https://wa.me/5521935005738?text=Olá!%20Quero%20saber%20mais%20sobre%20os%20Planos%20ESPX%20de%20Comunicação%20no%20WhatsApp.">🚀 Quero falar com a ESPX</a>
+      <p style="color:#777;font-size:13px;margin-top:8px">Atendimento humano e estratégico — fale com nossa equipe agora.</p>
+    </div>
+  </section>
+</body>
+</html>
