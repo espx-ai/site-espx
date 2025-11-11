@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Armários Inteligentes ESPX — Tecnologia que transforma espaços</title>
+  <meta name="description" content="Armários Inteligentes ESPX: praticidade, segurança e automação para condomínios, farmácias, academias, parques e empresas. Produção nacional com parceiros certificados, durabilidade e integração digital." />
+  <meta name="robots" content="index,follow" />
+  <meta property="og:title" content="Armários Inteligentes ESPX" />
+  <meta property="og:description" content="Praticidade, segurança e automação para transformar a experiência em qualquer espaço." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="armarios-hero.jpg" />
+  <meta property="og:locale" content="pt_BR" />
+  <link rel="icon" href="logx.png" />
+
+  <style>
+    :root {
+      --brand-blue: #1e2157;
+      --brand-orange: #ef7b25;
+      --gray-900: #212121;
+      --gray-700: #757575;
+      --gray-100: #eef1f6;
+      --gray-50:  #f9fafc;
+      --white:    #ffffff;
+      --shadow-1: 0 10px 25px rgba(0,0,0,.08);
+      --shadow-2: 0 20px 40px rgba(0,0,0,.12);
+      --radius-xl: 20px;
+      --radius-lg: 14px;
+      --radius-md: 10px;
+      --maxw: 1120px;
+    }
+
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      color: var(--gray-900);
+      background:
+        radial-gradient(1200px 600px at 10% -10%, rgba(239,123,37,.10), transparent 60%),
+        radial-gradient(1000px 600px at 90% 0%, rgba(30,33,87,.10), transparent 55%),
+        var(--gray-50);
+      line-height: 1.55;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+
+    .container { width: 100%; max-width: var(--maxw); margin: 0 auto; padding: 0 20px; }
+
+    header.site-header {
+      position: sticky; top: 0; z-index: 30;
+      backdrop-filter: saturate(140%) blur(8px);
+      background: rgba(255,255,255,.72);
+      border-bottom: 1px solid rgba(0,0,0,.06);
+    }
+    .nav {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 10px 0;
+    }
+    .brand { display: flex; align-items: center; gap: 12px; font-weight: 700; }
+    .brand img { width: 44px; height: 44px; border-radius: 10px; }
+    .brand span { color: var(--brand-blue); letter-spacing: .2px; }
+    .nav .actions { display: flex; align-items: center; gap: 10px; }
+
+    .btn, .btn-outline {
+      display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+      padding: 12px 18px; border-radius: 999px; font-weight: 600; font-size: 15px;
+      transition: transform .15s ease, box-shadow .2s ease, background .2s ease, color .2s ease;
+      will-change: transform;
+    }
+    .btn { background: var(--brand-orange); color: var(--white); box-shadow: var(--shadow-1); }
+    .btn:hover { transform: translateY(-1px); box-shadow: var(--shadow-2); }
+    .btn-outline { border: 2px solid var(--brand-blue); color: var(--brand-blue); background: transparent; }
+    .btn-outline:hover { background: var(--brand-blue); color: var(--white); }
+
+    .section { padding: 56px 0; }
+    .section-head { text-align: center; margin-bottom: 26px; }
+    .eyebrow {
+      display: inline-block; font-weight: 800; letter-spacing: .12em; text-transform: uppercase;
+      font-size: 12px; color: var(--brand-orange); margin-bottom: 6px;
+    }
+    .h2 {
+      font-size: clamp(26px, 4vw, 36px);
+      color: var(--brand-blue);
+      margin: 0 0 10px;
+      line-height: 1.15;
+    }
+    .lead {
+      max-width: 860px; margin: 0 auto; color: var(--gray-700); font-size: 18px;
+    }
+
+    .hero { padding: 64px 0 32px; }
+    .hero-card {
+      background: linear-gradient(160deg, rgba(255,255,255,.92), rgba(255,255,255,.86));
+      border: 1px solid rgba(0,0,0,.06);
+      border-radius: var(--radius-xl);
+      padding: 36px 28px; box-shadow: var(--shadow-2);
+      display: grid; grid-template-columns: 1.15fr .85fr; gap: 24px; align-items: center;
+    }
+    .hero h1 {
+      font-size: clamp(28px, 4.4vw, 44px);
+      line-height: 1.08; margin: 0 0 14px; color: var(--brand-blue);
+      letter-spacing: .2px;
+    }
+    .hero p.subtitle {
+      font-size: clamp(16px, 2.3vw, 20px);
+      color: var(--gray-700); margin: 0 0 20px;
+    }
+    .hero-ctas { display: flex; gap: 12px; flex-wrap: wrap; }
+    .hero-media { position: relative; min-height: 260px; }
+    .hero-media .photo {
+      width: 100%; height: 100%;
+      object-fit: cover; border-radius: 16px;
+      box-shadow: var(--shadow-2);
+    }
+
+    .grid { display: grid; gap: 18px; grid-template-columns: repeat(4, minmax(0,1fr)); }
+    .grid-3 { grid-template-columns: repeat(3, minmax(0,1fr)); }
+    .grid-2 { grid-template-columns: repeat(2, minmax(0,1fr)); }
+
+    .card {
+      background: #fff; border: 1px solid rgba(0,0,0,.06);
+      border-radius: var(--radius-lg); padding: 22px; box-shadow: var(--shadow-1);
+      text-align: left; transition: transform .15s ease, box-shadow .2s ease;
+    }
+    .card:hover { transform: translateY(-3px); box-shadow: var(--shadow-2); }
+    .card h3 { margin: 4px 0 8px; font-size: 18px; color: var(--brand-blue); }
+    .card p { margin: 0; color: #333; font-size: 15.5px; }
+    .badge {
+      display: inline-block; padding: 6px 10px; border-radius: 999px;
+      font-size: 12px; font-weight: 700; background: var(--gray-100); color: var(--brand-blue);
+      margin-bottom: 10px;
+    }
+
+    .striped {
+      background:
+        radial-gradient(800px 480px at 0% -10%, rgba(239,123,37,.10), transparent 60%),
+        linear-gradient(0deg, #ffffff, #ffffff);
+      border-top: 1px solid rgba(0,0,0,.06);
+      border-bottom: 1px solid rgba(0,0,0,.06);
+    }
+
+    .checklist { list-style: none; padding: 0; margin: 0; }
+    .checklist li { padding: 8px 0; color: #333; }
+
+    .cta {
+      background: linear-gradient(180deg, #fff, #fff);
+      border: 1px solid rgba(0,0,0,.06);
+      border-radius: var(--radius-xl);
+      box-shadow: var(--shadow-2);
+      padding: 28px;
+      text-align: center;
+    }
+
+    footer { padding: 36px 0 90px; color: var(--gray-700); }
+    footer .legal { font-size: 14px; }
+
+    .whatsapp-button {
+      position: fixed; right: 20px; bottom: 20px; z-index: 50;
+      background: #25d366; color: #fff; padding: 14px 18px; border-radius: 999px;
+      box-shadow: 0 10px 24px rgba(0,0,0,.16); font-weight: 700; display: inline-flex; gap: 8px; align-items: center;
+      transition: transform .15s ease;
+    }
+    .whatsapp-button:hover { transform: translateY(-2px); }
+
+    @media (max-width: 980px) {
+      .hero-card { grid-template-columns: 1fr; text-align: left; }
+      .hero-media { order: -1; }
+      .grid, .grid-3, .grid-2 { grid-template-columns: repeat(2, minmax(0,1fr)); }
+    }
+    @media (max-width: 560px) {
+      .grid, .grid-3, .grid-2 { grid-template-columns: 1fr; }
+      .hero h1 { font-size: 26px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      * { transition: none !important; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="index.html" aria-label="ESPX — início">
+        <img src="logoX.png" alt="Logo ESPX" />
+        <span>ESPX • Tecnologia</span>
+      </a>
+      <div class="actions">
+        <a class="btn-outline" href="https://www.instagram.com/espx.ai" target="_blank" rel="noopener noreferrer">Seguir no Instagram</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <div class="hero-card">
+        <div class="hero-content">
+          <h1>Armários Inteligentes ESPX — tecnologia que transforma espaços em experiências</h1>
+          <p class="subtitle">
+            Praticidade, segurança e automação para <strong>condomínios, farmácias, academias, parques e empresas</strong>.
+            Uma linha criada para reduzir filas, eliminar extravios, organizar o espaço e dar autonomia total ao usuário.
+          </p>
+          <div class="hero-ctas">
+            <a class="btn" href="https://wa.me/5521935005738?text=Olá!%20Quero%20saber%20sobre%20Armários%20Inteligentes%20ESPX." target="_blank" rel="noopener noreferrer">👉 Falar com Especialista</a>
+            <a class="btn-outline" href="#pilares">Ver Pilares</a>
+          </div>
+        </div>
+        <div class="hero-media" aria-label="Imagem dos armários inteligentes">
+          <img class="photo" src="armarios-hero.jpg" alt="Armários Inteligentes ESPX" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container section-head">
+      <span class="eyebrow">Visão</span>
+      <h2 class="h2">Um novo conceito de praticidade</h2>
+      <p class="lead">
+        Não é apenas guardar. É <strong>confiar, rastrear, retirar e seguir o dia</strong> com tranquilidade.
+        Cada módulo integra pessoas e tecnologia com abertura digital, notificações automáticas e controle em tempo real.
+      </p>
+    </div>
+  </section>
+
+  <section id="pilares" class="section striped">
+    <div class="container section-head">
+      <span class="eyebrow">Pilares de Valor</span>
+      <h2 class="h2">Onde a tecnologia encontra a experiência</h2>
+      <p class="lead">Os Armários Inteligentes ESPX resolvem problemas reais, elevando o padrão em diferentes contextos.</p>
+    </div>
+    <div class="container">
+      <div class="grid">
+        <article class="card">
+          <span class="badge">Condomínios</span>
+          <h3>“Porteiro digital” para entregas</h3>
+          <p>Receba encomendas com segurança, avise o morador instantaneamente e acabe com filas e extravios. Valorização imediata do empreendimento.</p>
+        </article>
+        <article class="card">
+          <span class="badge">Farmácias</span>
+          <h3>Retirada ágil de pedidos</h3>
+          <p>Cliente notificado, retirada autônoma, balcão mais livre e equipe focada no atendimento humano. Logística clara e rastreável.</p>
+        </article>
+        <article class="card">
+          <span class="badge">Academias, Clubes e Parques</span>
+          <h3>Liberdade com segurança</h3>
+          <p>Guarda-volumes com QR Code/biometria, sem chave e sem preocupação. Ideal para alta rotatividade e eventos.</p>
+        </article>
+        <article class="card">
+          <span class="badge">Empresas & Coworkings</span>
+          <h3>Logística interna organizada</h3>
+          <p>Entregas e trocas sem intermediários, integração com controle de acesso e relatórios de uso para eficiência operacional.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- NOVO TEXTO: posição neutra sobre fabricação e detalhes de qualidade -->
+  <section class="section">
+    <div class="container section-head">
+      <span class="eyebrow">Qualidade & Confiança</span>
+      <h2 class="h2">Engenharia certa, durabilidade e suporte local</h2>
+      <p class="lead">
+        A linha é desenvolvida com <strong>produção nacional por parceiros industriais certificados</strong>,
+        combinando materiais de alta resistência e acabamentos técnicos para longa vida útil e fácil manutenção.
+      </p>
+    </div>
+    <div class="container">
+      <div class="grid-3 grid">
+        <article class="card">
+          <h3>Materiais & Acabamento</h3>
+          <ul class="checklist">
+            <li>• Estrutura em aço de alta resistência.</li>
+            <li>• <b>Pintura eletrostática a pó</b> para maior durabilidade.</li>
+            <li>• <b>Tratamento anticorrosivo</b> e acabamento premium.</li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3>Confiabilidade de Uso</h3>
+          <ul class="checklist">
+            <li>• Fechaduras eletromecânicas de padrão industrial.</li>
+            <li>• Componentes padronizados e reposição ágil.</li>
+            <li>• Ventilação e fixação adequadas ao ambiente.</li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3>Manutenção & Suporte</h3>
+          <ul class="checklist">
+            <li>• Projeto modular para expansão e troca rápida de partes.</li>
+            <li>• <b>Suporte técnico local</b> e orientação de instalação.</li>
+            <li>• Custos de ciclo de vida otimizados.</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section striped">
+    <div class="container section-head">
+      <span class="eyebrow">Tecnologia</span>
+      <h2 class="h2">Automação que trabalha em silêncio</h2>
+      <p class="lead">Integração simples, operação intuitiva e controle total da jornada.</p>
+    </div>
+    <div class="container">
+      <div class="grid-2 grid">
+        <article class="card">
+          <h3>Acesso inteligente</h3>
+          <ul class="checklist">
+            <li>• QR Code, PIN, cartão/NFC ou app.</li>
+            <li>• Notificação instantânea por WhatsApp/SMS/e-mail.</li>
+            <li>• Auditoria e trilha de uso em tempo real.</li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3>Integração & Gestão</h3>
+          <ul class="checklist">
+            <li>• APIs para portarias, ERPs e CRMs.</li>
+            <li>• Dashboards e relatórios de ocupação.</li>
+            <li>• Modo gratuito ou tarifado por tempo/serviço.</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container section-head">
+      <span class="eyebrow">Resultados</span>
+      <h2 class="h2">Benefícios diretos para gestão e usuários</h2>
+    </div>
+    <div class="container">
+      <div class="grid-3 grid">
+        <article class="card">
+          <h3>Operação mais leve</h3>
+          <p>Menos filas, menos erros e menos demandas manuais. Sua equipe foca no que importa.</p>
+        </article>
+        <article class="card">
+          <h3>Experiência superior</h3>
+          <p>Retirada 24/7, autonomia do usuário e comunicação clara. Satisfação e fidelização.</p>
+        </article>
+        <article class="card">
+          <h3>Valorização do espaço</h3>
+          <p>Organização, estética e tecnologia elevam o padrão percebido do seu ambiente.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section striped">
+    <div class="container">
+      <div class="cta">
+        <h2 class="h2" style="margin-top:0;">Pronto para transformar seu espaço?</h2>
+        <p class="lead">
+          Projetamos o módulo ideal para o seu ambiente — do layout à integração digital, com implantação e suporte completo.
+        </p>
+        <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:14px;">
+          <a class="btn" href="https://wa.me/5521935005738?text=Olá!%20Quero%20implantar%20Armários%20Inteligentes%20ESPX." target="_blank" rel="noopener noreferrer">👉 Falar com Especialista</a>
+          <a class="btn-outline" href="#pilares">Ver Pilares</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p class="legal">©<span id="ano-atual">2019</span> ESPX • <strong>Soluções em Tecnologia da Informação.</strong></p>
+    </div>
+  </footer>
+
+  <a class="whatsapp-button" href="https://wa.me/5521935005738?text=Olá!%20Quero%20falar%20com%20um%20especialista%20sobre%20Armários%20Inteligentes%20ESPX." target="_blank" rel="noopener" aria-label="Conversar no WhatsApp">
+    💬 WhatsApp
+  </a>
+
+  <script>
+    document.getElementById('ano-atual').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
