@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://www.espx-ai.com.br/sitemap.xml
