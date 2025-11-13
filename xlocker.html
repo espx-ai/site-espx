@@ -40,6 +40,7 @@
     "url": "https://www.espx-ai.com.br/xlocker.html"
   }
   </script>
+
   <style>
     :root {
       --brand-blue: #1e2157;
@@ -192,6 +193,79 @@
     }
     .whatsapp-button:hover { transform: translateY(-2px); }
 
+    /* --- Modal de Jornadas --- */
+    .journey-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,.45);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 80;
+      padding: 16px;
+    }
+    .journey-overlay.is-visible {
+      display: flex;
+    }
+    .journey-modal {
+      background: #ffffff;
+      border-radius: 20px;
+      box-shadow: 0 20px 40px rgba(0,0,0,.25);
+      max-width: 640px;
+      width: 100%;
+      padding: 24px 22px 22px;
+      position: relative;
+    }
+    .journey-close {
+      position: absolute;
+      top: 10px;
+      right: 14px;
+      border: none;
+      background: transparent;
+      font-size: 22px;
+      cursor: pointer;
+      color: #757575;
+    }
+    .journey-modal h2 {
+      margin-top: 0;
+      margin-bottom: 6px;
+      font-size: 22px;
+      color: var(--brand-blue);
+    }
+    .journey-modal p {
+      margin-top: 0;
+      margin-bottom: 10px;
+      color: var(--gray-700);
+      font-size: 15.5px;
+    }
+    .journey-steps {
+      margin: 0;
+      padding-left: 20px;
+      color: #333;
+      font-size: 15.5px;
+    }
+    .journey-steps li {
+      margin-bottom: 6px;
+    }
+    .journey-btn {
+      margin-top: 10px;
+      border-radius: 999px;
+      border: 1px solid var(--brand-blue);
+      padding: 8px 14px;
+      font-size: 14px;
+      background: #fff;
+      color: var(--brand-blue);
+      cursor: pointer;
+      font-weight: 600;
+      transition: background .15s ease, color .15s ease, transform .15s ease, box-shadow .2s ease;
+    }
+    .journey-btn:hover {
+      background: var(--brand-blue);
+      color: #fff;
+      transform: translateY(-1px);
+      box-shadow: var(--shadow-1);
+    }
+
     @media (max-width: 980px) {
       .hero-card { grid-template-columns: 1fr; text-align: left; }
       .hero-media { order: -1; }
@@ -236,13 +310,12 @@
             <a class="btn-outline" href="#pilares">Ver Pilares</a>
           </div>
         </div>
-       <div class="hero-media" aria-label="Imagem dos armários inteligentes">
-  <img class="photo" src="armarios-hero.png" alt="Armários Inteligentes ESPX" />
-  <p style="font-size: 10px; color: #757575; text-align: center; margin-top: 6px;">
-    Imagem ilustrativa. Pode não representar fielmente o produto final.
-  </p>
-</div>
-
+        <div class="hero-media" aria-label="Imagem dos armários inteligentes">
+          <img class="photo" src="armarios-hero.png" alt="Armários Inteligentes ESPX" />
+          <p style="font-size: 10px; color: #757575; text-align: center; margin-top: 6px;">
+            Imagem ilustrativa. Pode não representar fielmente o produto final.
+          </p>
+        </div>
       </div>
     </div>
   </section>
@@ -270,27 +343,31 @@
           <span class="badge">Condomínios</span>
           <h3>“Porteiro digital” para entregas</h3>
           <p>Receba encomendas com segurança, avise o morador instantaneamente e acabe com filas e extravios. Valorização imediata do empreendimento.</p>
+          <button class="journey-btn" data-journey="condominios">Ver jornada de uso</button>
         </article>
         <article class="card">
           <span class="badge">Farmácias</span>
           <h3>Retirada ágil de pedidos</h3>
           <p>Cliente notificado, retirada autônoma, balcão mais livre e equipe focada no atendimento humano. Logística clara e rastreável.</p>
+          <button class="journey-btn" data-journey="farmacias">Ver jornada de uso</button>
         </article>
         <article class="card">
           <span class="badge">Academias, Clubes e Parques</span>
           <h3>Liberdade com segurança</h3>
           <p>Guarda-volumes com QR Code/biometria, sem chave e sem preocupação. Ideal para alta rotatividade e eventos.</p>
+          <button class="journey-btn" data-journey="academias">Ver jornada de uso</button>
         </article>
         <article class="card">
           <span class="badge">Empresas & Coworkings</span>
           <h3>Logística interna organizada</h3>
           <p>Entregas e trocas sem intermediários, integração com controle de acesso e relatórios de uso para eficiência operacional.</p>
+          <button class="journey-btn" data-journey="empresas">Ver jornada de uso</button>
         </article>
       </div>
     </div>
   </section>
 
-  <!-- NOVO TEXTO: posição neutra sobre fabricação e detalhes de qualidade -->
+  <!-- Qualidade & Confiança -->
   <section class="section">
     <div class="container section-head">
       <span class="eyebrow">Qualidade & Confiança</span>
@@ -396,6 +473,16 @@
     </div>
   </section>
 
+  <!-- Modal de Jornadas -->
+  <div class="journey-overlay" id="journey-overlay" aria-hidden="true">
+    <div class="journey-modal" role="dialog" aria-modal="true" aria-labelledby="journey-title">
+      <button class="journey-close" type="button" aria-label="Fechar jornada">&times;</button>
+      <h2 id="journey-title">Jornada de uso</h2>
+      <p id="journey-intro"></p>
+      <ol class="journey-steps" id="journey-steps"></ol>
+    </div>
+  </div>
+
   <footer>
     <div class="container">
       <p class="legal">©<span id="ano-atual">2019</span> ESPX • <strong>Soluções em Tecnologia da Informação.</strong></p>
@@ -407,18 +494,105 @@
   </a>
 
   <script>
+    // Atualiza o ano no rodapé
     document.getElementById('ano-atual').textContent = new Date().getFullYear();
+
+    // Jornadas por segmento
+    const journeys = {
+      condominios: {
+        title: 'Como funciona em condomínios',
+        intro: 'Do recebimento da encomenda até a retirada pelo morador, tudo é simples, seguro e rastreável.',
+        steps: [
+          'O entregador chega ao condomínio e deposita a encomenda em um dos compartimentos do XLocker.',
+          'O sistema registra o apartamento/destinatário e gera um código ou link seguro para retirada.',
+          'O morador recebe uma notificação (por exemplo, via WhatsApp, SMS ou e-mail) com as instruções.',
+          'Quando for conveniente, o morador se dirige ao XLocker, digita o código ou lê o QR Code e a porta se abre.',
+          'A retirada é registrada automaticamente, mantendo histórico de quem retirou, quando e em qual compartimento.'
+        ]
+      },
+      farmacias: {
+        title: 'Como funciona em farmácias',
+        intro: 'Ideal para retirada rápida de pedidos online, medicamentos e produtos de alta rotatividade.',
+        steps: [
+          'O pedido é separado internamente pela equipe da farmácia e armazenado em um compartimento do XLocker.',
+          'O sistema associa o compartimento ao pedido do cliente e gera um código único de retirada.',
+          'O cliente recebe uma mensagem com o código, QR Code ou link de retirada, junto com o endereço da farmácia.',
+          'Na chegada, o cliente vai direto ao XLocker, informa o código na tela e retira o produto sem precisar enfrentar filas.',
+          'A farmácia acompanha tudo por painel de gestão, com visão de retiradas pendentes, concluídas e tempo médio de retirada.'
+        ]
+      },
+      academias: {
+        title: 'Como funciona em academias, clubes e parques',
+        intro: 'Focado em conveniência para quem pratica atividades físicas e precisa guardar pertences com segurança.',
+        steps: [
+          'Na recepção ou diretamente no painel do XLocker, o usuário escolhe um compartimento disponível.',
+          'O sistema gera um código ou credencial de acesso (QR Code, biometria ou PIN) associado àquele usuário por um período.',
+          'O usuário guarda seus pertences no armário, tranca digitalmente e segue para o treino ou atividade.',
+          'Ao final, retorna ao XLocker, autentica-se com o mesmo método e o compartimento é liberado.',
+          'A gestão acompanha a ocupação dos armários, tempo de uso e pode liberar ou bloquear compartimentos conforme a rotina.'
+        ]
+      },
+      empresas: {
+        title: 'Como funciona em empresas e coworkings',
+        intro: 'Perfeito para logística interna, troca de materiais, documentos e equipamentos entre equipes.',
+        steps: [
+          'A área responsável (ex.: TI, facilities ou logística) deposita equipamentos, documentos ou itens em um compartimento do XLocker.',
+          'O sistema registra o colaborador ou setor responsável pela retirada e gera um aviso automático.',
+          'O colaborador recebe notificação com instruções de retirada e prazo, podendo se organizar sem depender de horário de balcão.',
+          'No horário mais conveniente, o colaborador vai ao XLocker, se identifica e retira o item no compartimento indicado.',
+          'Tudo fica registrado, facilitando inventário, rastreabilidade e reduzindo perdas e extravios na operação interna.'
+        ]
+      }
+    };
+
+    const overlay = document.getElementById('journey-overlay');
+    const titleEl = document.getElementById('journey-title');
+    const introEl = document.getElementById('journey-intro');
+    const stepsEl = document.getElementById('journey-steps');
+
+    function openJourney(segment) {
+      const journey = journeys[segment];
+      if (!journey) return;
+
+      titleEl.textContent = journey.title;
+      introEl.textContent = journey.intro;
+
+      stepsEl.innerHTML = '';
+      journey.steps.forEach(step => {
+        const li = document.createElement('li');
+        li.textContent = step;
+        stepsEl.appendChild(li);
+      });
+
+      overlay.classList.add('is-visible');
+      overlay.setAttribute('aria-hidden', 'false');
+    }
+
+    function closeJourney() {
+      overlay.classList.remove('is-visible');
+      overlay.setAttribute('aria-hidden', 'true');
+    }
+
+    document.querySelectorAll('.journey-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const segment = btn.getAttribute('data-journey');
+        openJourney(segment);
+      });
+    });
+
+    document.querySelector('.journey-close').addEventListener('click', closeJourney);
+
+    overlay.addEventListener('click', (e) => {
+      if (e.target === overlay) {
+        closeJourney();
+      }
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        closeJourney();
+      }
+    });
   </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
