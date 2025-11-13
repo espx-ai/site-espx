@@ -266,6 +266,13 @@
       box-shadow: var(--shadow-1);
     }
 
+    /* Footer da jornada */
+    .journey-footer {
+      margin-top: 10px;
+      color: #555;
+      font-size: 14px;
+    }
+
     @media (max-width: 980px) {
       .hero-card { grid-template-columns: 1fr; text-align: left; }
       .hero-media { order: -1; }
@@ -480,6 +487,7 @@
       <h2 id="journey-title">Jornada de uso</h2>
       <p id="journey-intro"></p>
       <ol class="journey-steps" id="journey-steps"></ol>
+      <p id="journey-footer" class="journey-footer"></p>
     </div>
   </div>
 
@@ -503,13 +511,13 @@
         title: 'Como funciona em condomínios',
         intro: 'Do recebimento da encomenda até a retirada pelo morador. Simples, Seguro e Rastreável.',
         steps: [
-         'O entregador chega à portaria e informa o apartamento, exatamente como já acontece hoje.',
+          'O entregador chega à portaria e informa o apartamento, exatamente como já acontece hoje.',
           'O porteiro acessa o painel do XLocker, seleciona “Nova Entrega”, digita o número do apartamento e deposita a encomenda no compartimento indicado.',
           'O sistema envia automaticamente ao morador um PIN e/ou QR Code por WhatsApp, SMS ou e-mail.',
           'Quando quiser, o morador vai até o XLocker e digita o PIN ou apresenta o QR Code para abrir o compartimento.',
           'A retirada é registrada automaticamente, garantindo histórico completo, segurança e zero extravio.'
         ],
-        footer: '👉 Precisa de uma jornada personalizada? Podemos adaptar o fluxo ao seu condomínio, fale conosco.'
+        footer: '👉 Precisa de uma jornada personalizada? Adaptamos o XLocker ao funcionamento do seu condomínio. Fale conosco.'
       },
       farmacias: {
         title: 'Como funciona em farmácias',
@@ -550,6 +558,7 @@
     const titleEl = document.getElementById('journey-title');
     const introEl = document.getElementById('journey-intro');
     const stepsEl = document.getElementById('journey-steps');
+    const footerEl = document.getElementById('journey-footer');
 
     function openJourney(segment) {
       const journey = journeys[segment];
@@ -564,6 +573,15 @@
         li.textContent = step;
         stepsEl.appendChild(li);
       });
+
+      // Footer opcional
+      if (journey.footer) {
+        footerEl.textContent = journey.footer;
+        footerEl.style.display = 'block';
+      } else {
+        footerEl.textContent = '';
+        footerEl.style.display = 'none';
+      }
 
       overlay.classList.add('is-visible');
       overlay.setAttribute('aria-hidden', 'false');
@@ -597,5 +615,3 @@
   </script>
 </body>
 </html>
-
-
