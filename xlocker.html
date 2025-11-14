@@ -2,14 +2,14 @@
 <html lang="pt-br">
 <head>
   <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-962157759"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-962157759"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-    gtag('config', 'AW-962157759');
-  </script>
+  gtag('config', 'AW-962157759');
+</script>
   
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -162,7 +162,7 @@
     .card {
       background: #fff; border: 1px solid rgba(0,0,0,.06);
       border-radius: var(--radius-lg); padding: 22px; box-shadow: var(--shadow-1);
-      text-align: left; transition: transform .15s.ease, box-shadow .2s.ease;
+      text-align: left; transition: transform .15s ease, box-shadow .2s ease;
     }
     .card:hover { transform: translateY(-3px); box-shadow: var(--shadow-2); }
     .card h3 { margin: 4px 0 8px; font-size: 18px; color: var(--brand-blue); }
@@ -200,7 +200,7 @@
       position: fixed; right: 20px; bottom: 20px; z-index: 50;
       background: #25d366; color: #fff; padding: 14px 18px; border-radius: 999px;
       box-shadow: 0 10px 24px rgba(0,0,0,.16); font-weight: 700; display: inline-flex; gap: 8px; align-items: center;
-      transition: transform .15s.ease;
+      transition: transform .15s ease;
     }
     .whatsapp-button:hover { transform: translateY(-2px); }
 
@@ -443,4 +443,192 @@
         </article>
         <article class="card">
           <h3>Integração & Gestão</h3>
-          <ul class
+          <ul class="checklist">
+            <li>• APIs para portarias, ERPs e CRMs.</li>
+            <li>• Dashboards e relatórios de ocupação.</li>
+            <li>• Modo gratuito ou tarifado por tempo/serviço.</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container section-head">
+      <span class="eyebrow">Resultados</span>
+      <h2 class="h2">Benefícios diretos para gestão e usuários</h2>
+    </div>
+    <div class="container">
+      <div class="grid-3 grid">
+        <article class="card">
+          <h3>Operação mais leve</h3>
+          <p>Menos filas, menos erros e menos demandas manuais. Sua equipe foca no que importa.</p>
+        </article>
+        <article class="card">
+          <h3>Experiência superior</h3>
+          <p>Retirada 24/7, autonomia do usuário e comunicação clara. Satisfação e fidelização.</p>
+        </article>
+        <article class="card">
+          <h3>Valorização do espaço</h3>
+          <p>Organização, estética e tecnologia elevam o padrão percebido do seu ambiente.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section striped">
+    <div class="container">
+      <div class="cta">
+        <h2 class="h2" style="margin-top:0;">Pronto para transformar seu espaço?</h2>
+        <p class="lead">
+          Projetamos o módulo ideal para o seu ambiente. Do layout à integração digital, com implantação e suporte completo.
+        </p>
+        <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:14px;">
+          <a class="btn" href="https://wa.me/5521935005738?text=Olá!%20Quero%20implantar%20Armários%20Inteligentes%20ESPX." target="_blank" rel="noopener noreferrer">👉 Falar com Especialista</a>
+          <a class="btn-outline" href="#pilares">Ver Pilares</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modal de Jornadas -->
+  <div class="journey-overlay" id="journey-overlay" aria-hidden="true">
+    <div class="journey-modal" role="dialog" aria-modal="true" aria-labelledby="journey-title">
+      <button class="journey-close" type="button" aria-label="Fechar jornada">&times;</button>
+      <h2 id="journey-title">Jornada de uso</h2>
+      <p id="journey-intro"></p>
+      <ol class="journey-steps" id="journey-steps"></ol>
+      <p id="journey-footer" class="journey-footer"></p>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container">
+      <p class="legal">©<span id="ano-atual">2019</span> ESPX • <strong>Soluções em Tecnologia da Informação.</strong></p>
+    </div>
+  </footer>
+
+  <a class="whatsapp-button" href="https://wa.me/5521935005738?text=Olá!%20Quero%20falar%20com%20um%20especialista%20sobre%20Armários%20Inteligentes%20ESPX." target="_blank" rel="noopener" aria-label="Conversar no WhatsApp">
+    💬 WhatsApp
+  </a>
+
+  <script>
+    // Atualiza o ano no rodapé
+    document.getElementById('ano-atual').textContent = new Date().getFullYear();
+
+    // Jornadas por segmento
+    const journeys = {
+      condominios: {
+        title: '🏢 Como funciona em condomínios',
+        intro: '📦Do recebimento da encomenda até a retirada pelo morador. "CCI-DROP"',
+        steps: [
+          'O entregador chega à portaria e informa o apartamento, exatamente como já acontece hoje.',
+          'O porteiro acessa o XLocker, seleciona “Nova Entrega”, digita o número do apartamento e deposita a encomenda.',
+          'O sistema envia automaticamente ao morador um PIN e/ou QR Code por WhatsApp, SMS e e-mail.',
+          'Quando quiser, o morador vai até o XLocker e digita o PIN ou apresenta o QR Code para abrir o compartimento.',
+          'A retirada é registrada automaticamente, garantindo histórico completo, segurança e zero extravio.'
+        ],
+        footer: '🧩Simples, 🔐Seguro e 🔎Rastreável.<br>👉Precisa de uma jornada personalizada? Fale conosco📲'
+      },
+      farmacias: {
+        title: '💊 Como funciona em farmácias, rede de Varejo',
+        intro: '📦Ideal para retirada rápida de pedidos online e sem fila. "CR-OMNI"',
+        steps: [
+          'O pedido é separado internamente pela equipe, exatamente como já acontece hoje.',
+          'A equipe acessa o sistema OMINI e cadastra a entrega (com dados do pedido e do cliente).',
+          'A equipe vai até o XLocker e deposita a encomenda na porta com os dados cadastrados',
+          'O sistema envia automaticamente ao cliente um PIN e/ou QR Code por SMS e e-mail.',
+          'Na chegada, o cliente vai direto ao XLocker, informa o código na tela e retira o produto sem precisar enfrentar filas.',
+          'O estabelecimento acompanha tudo por painel de gestão, com visão de retiradas pendentes, concluídas e tempo médio de retirada.'
+        ],
+        footer: '🧩Simples, 🔐Seguro e 🔎Rastreável.<br>👉Precisa de uma jornada personalizada? Fale conosco📲'
+      },
+      academias: {
+        title: '🏋️‍♂️ Como funciona em academias, clubes e parques',
+        intro: '📦Focado em conveniência para quem precisa guardar pertences com segurança. "GV-NEO-Publ"',
+        steps: [
+          'Diretamente no painel do XLocker, o usuário escolhe a opção "Alocar".',
+          'Ele escolhe a posição e o tamanho desejado.',
+          'Ele cadastra o seu Telefone e CPF.',
+          'O usuário guarda seus pertences no armário, tranca digitalmente e segue para suas atividades.',
+          'Ao final, retorna ao XLocker, escolhe "Devolver" e autentica-se (celular + CPF) e o compartimento é liberado.',
+          'A gestão acompanha a ocupação dos armários, tempo de uso e pode liberar ou bloquear compartimentos conforme a rotina.'
+        ],
+        footer: '🧩Simples, 🔐Seguro e 🔎Rastreável.<br>👉Precisa de uma jornada personalizada? Fale conosco📲'
+      },
+      empresas: {
+        title: '💼 Como funciona em empresas e coworkings',
+        intro: '📦 Perfeito para logística interna, troca de materiais, documentos e equipamentos entre equipes. "CR-OMNI"',
+        steps: [
+          'A equipe acessa o sistema OMINI e cadastra a entrega (com dados do pedido e do colaborador).',
+          'A equipe vai até o XLocker e deposita a entrega na porta com os dados cadastrados.',
+          'O sistema envia automaticamente ao cliente um PIN e/ou QR Code por SMS e e-mail.',
+          'Na chegada, o colaborador vai direto ao XLocker, informa o código na tela e retira o produto sem precisar enfrentar filas.',
+          'A equipe acompanha tudo por painel de gestão, com visão de retiradas pendentes, concluídas e tempo médio de retirada.',
+          'Tudo fica registrado, facilitando inventário, rastreabilidade e reduzindo perdas e extravios na operação interna.'
+        ],
+        footer: '🧩Simples, 🔐Seguro e 🔎Rastreável.<br>👉Precisa de uma jornada personalizada? Fale conosco📲'
+      }
+    };
+
+    const overlay = document.getElementById('journey-overlay');
+    const titleEl = document.getElementById('journey-title');
+    const introEl = document.getElementById('journey-intro');
+    const stepsEl = document.getElementById('journey-steps');
+    const footerEl = document.getElementById('journey-footer');
+
+    function openJourney(segment) {
+      const journey = journeys[segment];
+      if (!journey) return;
+
+      titleEl.textContent = journey.title;
+      introEl.textContent = journey.intro;
+
+      stepsEl.innerHTML = '';
+      journey.steps.forEach(step => {
+        const li = document.createElement('li');
+        li.textContent = step;
+        stepsEl.appendChild(li);
+      });
+
+      // Footer opcional com HTML (para o <br>)
+      if (journey.footer) {
+        footerEl.innerHTML = journey.footer;
+        footerEl.style.display = 'block';
+      } else {
+        footerEl.innerHTML = '';
+        footerEl.style.display = 'none';
+      }
+
+      overlay.classList.add('is-visible');
+      overlay.setAttribute('aria-hidden', 'false');
+    }
+
+    function closeJourney() {
+      overlay.classList.remove('is-visible');
+      overlay.setAttribute('aria-hidden', 'true');
+    }
+
+    document.querySelectorAll('.journey-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const segment = btn.getAttribute('data-journey');
+        openJourney(segment);
+      });
+    });
+
+    document.querySelector('.journey-close').addEventListener('click', closeJourney);
+
+    overlay.addEventListener('click', (e) => {
+      if (e.target === overlay) {
+        closeJourney();
+      }
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        closeJourney();
+      }
+    });
+  </script>
+</body>
+</html>
