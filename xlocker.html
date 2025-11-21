@@ -1,0 +1,927 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1155567846718233');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1155567846718233&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+  
+  <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KCKHJXRL');</script>
+<!-- End Google Tag Manager -->
+  
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-962157759"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-962157759');
+</script>
+  <!-- Google tag (gtag.js) event - delayed navigation helper -->
+<script>
+  // Helper function to delay opening a URL until a gtag event is sent.
+  // Call it in response to an action that should navigate to a URL.
+  function gtagSendEvent(url) {
+    var callback = function () {
+      if (typeof url === 'string') {
+        window.location = url;
+      }
+    };
+    gtag('event', 'click', {
+      'event_callback': callback,
+      'event_timeout': 2000,
+      // <event_parameters>
+    });
+    return false;
+  }
+</script>
+
+ 
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>XLocker | Acabe com o caos de encomendas na portaria do seu condomínio</title>
+  <meta name="description" content="O XLocker acaba com filas, extravios e caos na portaria. Armários inteligentes com notificações automáticas, segurança total e estudo gratuito do modelo ideal para o seu condomínio." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --blue:#1e2157;
+      --orange:#ef7b25;
+      --g900:#212121;
+      --g700:#5d5d5d;
+      --g500:#8a8a8a;
+      --g50:#f7f9fc;
+      --white:#ffffff;
+      --maxw:1120px;
+      --shadow1:0 10px 24px rgba(0,0,0,.08);
+      --shadow2:0 20px 44px rgba(0,0,0,.12);
+      --r-xl:22px;
+      --r-lg:16px;
+    }
+
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{
+      font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;
+      background:linear-gradient(180deg,#f3f5ff 0,#f9fafc 40%,#ffffff 100%);
+      color:var(--g900);
+      -webkit-font-smoothing:antialiased;
+    }
+    a{text-decoration:none;color:inherit}
+    img{display:block;max-width:100%}
+
+    .container{
+      max-width:var(--maxw);
+      margin:0 auto;
+      padding:0 20px;
+    }
+
+    /* Header */
+    .h{
+      position:sticky;
+      top:0;
+      z-index:40;
+      background:rgba(255,255,255,.9);
+      backdrop-filter:saturate(140%) blur(10px);
+      border-bottom:1px solid rgba(0,0,0,.04);
+    }
+    .nav{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      padding:10px 0;
+    }
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      font-weight:800;
+      font-size:15px;
+      color:var(--blue);
+    }
+    .brand img{
+      width:40px;
+      height:40px;
+      border-radius:12px;
+      box-shadow:0 6px 14px rgba(0,0,0,.15);
+    }
+
+    .btn,.btn-o{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:8px;
+      padding:12px 20px;
+      border-radius:999px;
+      font-weight:700;
+      font-size:14px;
+      cursor:pointer;
+      transition:transform .15s ease, box-shadow .2s ease, background .2s ease, color .2s ease;
+      border:none;
+    }
+    .btn{
+      background:var(--orange);
+      color:#fff;
+      box-shadow:var(--shadow1);
+    }
+    .btn:hover{
+      transform:translateY(-1px);
+      box-shadow:var(--shadow2);
+    }
+    .btn-o{
+      background:transparent;
+      color:var(--blue);
+      border:2px solid var(--blue);
+    }
+    .btn-o:hover{
+      background:var(--blue);
+      color:#fff;
+    }
+
+    /* Hero */
+    .hero{
+      padding:40px 0 16px;
+    }
+    .hero-card{
+      background:#fff;
+      border-radius:var(--r-xl);
+      box-shadow:var(--shadow2);
+      border:1px solid rgba(0,0,0,.06);
+      display:grid;
+      grid-template-columns:1.1fr .9fr;
+      gap:28px;
+      padding:28px 26px;
+      align-items:center;
+    }
+    .hero-tag{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:4px 10px;
+      border-radius:999px;
+      background:#eef2ff;
+      color:#4f46e5;
+      font-size:11px;
+      font-weight:700;
+      text-transform:uppercase;
+      letter-spacing:.04em;
+      margin-bottom:10px;
+    }
+    h1{
+      font-size:clamp(26px,3.8vw,38px);
+      line-height:1.1;
+      margin-bottom:10px;
+      color:var(--blue);
+    }
+    .hero-sub{
+      font-size:15px;
+      color:var(--g700);
+      margin-bottom:14px;
+    }
+    .hero-sub b{color:var(--g900)}
+    .hero-badges{
+      display:flex;
+      flex-wrap:wrap;
+      gap:8px;
+      margin-bottom:18px;
+    }
+    .hero-badge{
+      padding:6px 10px;
+      border-radius:999px;
+      background:#fff;
+      border:1px solid rgba(0,0,0,.06);
+      font-size:11px;
+      font-weight:600;
+      color:#444;
+      box-shadow:var(--shadow1);
+    }
+    .hero-actions{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+    }
+    .hero-actions small{
+      font-size:11px;
+      color:#6b7280;
+      margin-top:4px;
+      display:block;
+    }
+    .hero-media{
+      position:relative;
+      border-radius:20px;
+      overflow:hidden;
+      background:radial-gradient(circle at 0 0,#4f46e5,#111827);
+      min-height:230px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+    }
+    .hero-media img{
+      max-width:82%;
+    }
+    .hero-media-badge{
+      position:absolute;
+      bottom:14px;
+      left:14px;
+      background:rgba(17,24,39,.9);
+      color:#e5e7eb;
+      padding:8px 12px;
+      border-radius:999px;
+      font-size:11px;
+      display:flex;
+      align-items:center;
+      gap:6px;
+    }
+
+    /* Sections */
+    section{
+      padding:24px 0;
+    }
+    .sec-title{
+      font-size:22px;
+      color:var(--blue);
+      margin-bottom:6px;
+    }
+    .sec-sub{
+      font-size:14px;
+      color:var(--g700);
+      margin-bottom:14px;
+    }
+
+    .painel-dor{
+      background:#f3f4ff;
+      border-radius:var(--r-lg);
+      padding:18px 18px 18px 20px;
+      border:1px solid rgba(79,70,229,.14);
+      box-shadow:0 12px 28px rgba(79,70,229,.08);
+    }
+    .painel-dor h2{
+      font-size:18px;
+      color:#3730a3;
+      margin-bottom:8px;
+    }
+    .painel-dor ul{
+      margin-left:18px;
+      font-size:14px;
+      color:#111827;
+    }
+    .painel-dor li{margin-bottom:4px}
+    .painel-dor-cta{
+      margin-top:10px;
+      font-size:13px;
+      color:#111827;
+    }
+    .painel-dor-cta b{color:#1f2937}
+
+    .grid-3{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:18px;
+    }
+    .card{
+      background:#fff;
+      border-radius:var(--r-lg);
+      padding:18px 18px 20px;
+      border:1px solid rgba(0,0,0,.05);
+      box-shadow:var(--shadow1);
+      font-size:14px;
+      color:#374151;
+    }
+    .card h3{
+      font-size:17px;
+      margin-bottom:6px;
+      color:var(--blue);
+    }
+    .card ul{
+      margin-left:16px;
+      margin-top:6px;
+    }
+    .card li{margin-bottom:4px}
+
+    .kpi{
+      font-size:13px;
+      margin-top:10px;
+      font-weight:600;
+      color:var(--blue);
+    }
+    .kpi span{
+      display:block;
+      font-size:11px;
+      color:var(--g500);
+      font-weight:400;
+      margin-top:3px;
+    }
+
+    .testimonials{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:16px;
+      margin-top:10px;
+    }
+    .testi{
+      background:#f9fafb;
+      border-radius:14px;
+      padding:14px 14px 12px;
+      border:1px solid rgba(0,0,0,.04);
+      font-size:13px;
+      color:#374151;
+    }
+    .testi strong{
+      display:block;
+      margin-top:6px;
+      font-size:12px;
+      color:#111827;
+    }
+    .testi small{
+      display:block;
+      font-size:11px;
+      color:#6b7280;
+    }
+
+    /* Form */
+    .form-wrap{
+      background:#fff;
+      border-radius:var(--r-xl);
+      border:1px solid rgba(0,0,0,.06);
+      box-shadow:var(--shadow2);
+      padding:22px 22px 20px;
+      max-width:var(--maxw);
+      margin:0 auto;
+    }
+    .form-head{
+      margin-bottom:14px;
+    }
+    .form-head h2{
+      font-size:20px;
+      color:var(--blue);
+      margin-bottom:4px;
+    }
+    .form-head p{
+      font-size:13px;
+      color:var(--g700);
+    }
+    .form-head p b{color:var(--blue);}
+    .form-grid{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:10px 16px;
+      margin-bottom:10px;
+    }
+    .form-group{
+      display:flex;
+      flex-direction:column;
+      gap:4px;
+      font-size:13px;
+    }
+    label{font-weight:600;color:#374151}
+    input,select,textarea{
+      width:100%;
+      padding:10px 11px;
+      border-radius:10px;
+      border:1px solid #e5e7eb;
+      font-size:14px;
+      font-family:inherit;
+    }
+    textarea{
+      min-height:80px;
+      resize:vertical;
+    }
+
+    .consent{
+      display:grid;
+      grid-template-columns:16px 1fr;
+      column-gap:8px;
+      align-items:start;
+      margin:6px 0 0;
+      font-size:11px;
+      color:#4b5563;
+    }
+    .consent a{text-decoration:underline}
+    .consent input{margin-top:2px}
+
+    .form-actions{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin-top:10px;
+      align-items:center;
+    }
+    .form-note{
+      font-size:11px;
+      color:#9ca3af;
+    }
+
+    /* ROI bloc */
+    .roi-grid{
+      display:grid;
+      grid-template-columns:1.1fr .9fr;
+      gap:18px;
+      align-items:flex-start;
+    }
+    .roi-list{
+      font-size:13px;
+      color:#374151;
+    }
+    .roi-list ul{
+      margin-left:16px;
+      margin-top:6px;
+    }
+    .roi-list li{margin-bottom:4px;}
+    .roi-pill{
+      display:inline-flex;
+      align-items:center;
+      gap:6px;
+      font-size:11px;
+      background:#fef3c7;
+      color:#92400e;
+      border-radius:999px;
+      padding:4px 10px;
+      margin-top:6px;
+    }
+
+    /* Outros blocos */
+    .info{
+      font-size:13px;
+      color:#6b7280;
+      padding:10px 0 60px;
+      text-align:center;
+    }
+
+    .sticky-bar{
+      position:sticky;
+      bottom:0;
+      z-index:39;
+      background:rgba(255,255,255,.96);
+      backdrop-filter:saturate(120%) blur(10px);
+      border-top:1px solid rgba(0,0,0,.06);
+    }
+    .sticky-inner{
+      max-width:var(--maxw);
+      margin:0 auto;
+      padding:8px 20px 10px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:10px;
+    }
+    .sticky-text{
+      font-size:13px;
+      color:#374151;
+    }
+    .sticky-text b{color:var(--blue)}
+
+    /* Responsivo */
+    @media (max-width:1024px){
+      .hero-card{
+        grid-template-columns:1fr;
+      }
+      .hero-media{min-height:200px}
+      .grid-3{grid-template-columns:repeat(2,1fr)}
+      .testimonials{grid-template-columns:1fr 1fr}
+      .roi-grid{grid-template-columns:1fr;}
+    }
+    @media (max-width:640px){
+      .nav{padding:8px 0}
+      .hero{padding-top:30px}
+      .hero-card{padding:22px 18px}
+      .grid-3{grid-template-columns:1fr}
+      .testimonials{grid-template-columns:1fr}
+      .form-grid{grid-template-columns:1fr}
+      .sticky-inner{
+        flex-direction:column;
+        align-items:flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="h">
+    <div class="container nav">
+      <a class="brand" href="index.html" aria-label="Voltar ao site principal">
+        <img src="logoX.png" alt="ESPX - Soluções em Tecnologia" />
+        <span>ESPX · XLocker</span>
+      </a>
+      <div>
+        <a class="btn-o" href="https://wa.me/5521935005738?text=Tenho%20interesse%20no%20XLocker%20para%20meu%20condom%C3%ADnio" target="_blank" rel="noopener noreferrer">
+          Falar com especialista
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-card">
+        <div>
+          <div class="hero-tag">
+            <span>🏢 Condomínios · Portarias · Encomendas</span>
+          </div>
+          <img src="XLocker1-logo.png" alt="XLocker by ESPX" style="height:60px; margin-bottom:12px;">
+          <h1>Seu condomínio vive com fila, extravio e reclamação? O XLocker resolve isso de forma definitiva.</h1>
+          <p class="hero-sub">
+            Transforme a portaria em um sistema <b>moderno, organizado e seguro</b>.  
+            Encomendas vão direto para o armário inteligente, o morador recebe notificação automática
+            e o porteiro para de ser “refém” de entregador o dia inteiro.
+          </p>
+
+          <div class="hero-badges">
+            <span class="hero-badge">Zero pacotes largados na portaria</span>
+            <span class="hero-badge">Menos de 1 min por entrega</span>
+            <span class="hero-badge">Abertura por QR Code ou código</span>
+            <span class="hero-badge">Registro de retirada</span>
+            <span class="hero-badge">Integração com WhatsApp</span>
+          </div>
+
+          <div class="hero-actions">
+            <a class="btn" href="https://wa.me/5521935005738?text=Quero%20acabar%20com%20o%20caos%20de%20encomendas%20na%20portaria%20com%20o%20XLocker" target="_blank" rel="noopener noreferrer">
+              🚀 Quero acabar com o caos na portaria
+            </a>
+            <a class="btn-o" href="#form">
+              Ver modelos & simular para meu condomínio
+            </a>
+          </div>
+          <small>Resposta rápida via WhatsApp para síndicos, administradoras e conselhos.</small>
+        </div>
+
+        <div class="hero-media">
+          <!-- Troque para uma foto real do XLocker se tiver -->
+          <img src="armarios-real.png" alt="Armário inteligente XLocker instalado em condomínio" />
+          <div class="hero-media-badge">
+            🔒 24h de segurança & organização para todas as encomendas do prédio
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DOR + URGÊNCIA -->
+  <section>
+    <div class="container">
+      <div class="painel-dor">
+        <h2>❗ Se o seu condomínio recebe muitas encomendas, você tem um problema caro na mão</h2>
+        <ul>
+          <li>Porteiros parando o tempo todo para receber entregadores</li>
+          <li>Pacotes empilhados em cima de balcão, cadeira e chão</li>
+          <li>Morador chegando em casa e não encontrando o que comprou</li>
+          <li>Filas na portaria em horário de pico, com clima de estresse</li>
+          <li>Administração ouvindo reclamações que não acabam nunca</li>
+        </ul>
+        <p class="painel-dor-cta">
+          Nada disso é “normal”.  
+          <b>A cada dia sem um sistema organizado, o condomínio perde tempo, segurança e a confiança dos moradores.</b><br>
+          👉 O XLocker foi criado exatamente para <b>eliminar esse problema de uma vez</b>.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- BENEFÍCIOS + COMO FUNCIONA + AUTORIDADE -->
+  <section>
+    <div class="container">
+      <div class="grid-3">
+        <div class="card">
+          <h3>✔ O que muda depois do XLocker</h3>
+          <ul>
+            <li>Encomendas organizadas, sem caixas soltas na portaria</li>
+            <li>Fim das discussões sobre “quem recebeu” e “onde está o pacote”</li>
+            <li>Porteiro mais focado na segurança do prédio</li>
+            <li>Morador recebe notificação automática quando chega algo</li>
+            <li>Retirada 24h, na hora que o morador quiser</li>
+            <li>Visual moderno que valoriza o condomínio</li>
+          </ul>
+          <p class="kpi">
+            📈 Resultado esperado: redução drástica de reclamações e sensação real de condomínio mais organizado.
+            <span>Baseado em cenários de condomínios com alto volume de entregas.</span>
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>⚙ Como funciona na prática (sem complicação)</h3>
+          <ul>
+            <li>1. O entregador chega na portaria e deposita o pacote em um box disponível</li>
+            <li>2. O sistema registra a entrega e gera um código ou QR Code seguro</li>
+            <li>3. O morador recebe uma notificação com as instruções de retirada</li>
+            <li>4. O morador vai até o XLocker e abre o box de forma autônoma</li>
+            <li>5. Tudo fica registrado: horário, box utilizado e retirada</li>
+          </ul>
+          <p class="kpi">
+            🕒 Menos interrupção, menos estresse e uma rotina de portaria muito mais previsível.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>🔧 Engenharia & tecnologia pensadas para uso intenso</h3>
+          <ul>
+            <li>Estrutura em aço de alta resistência para uso diário</li>
+            <li>Tratamento anticorrosivo e pintura eletrostática premium</li>
+            <li>Sistema eletrônico com padrões de segurança robustos</li>
+            <li>Suporte à abertura por QR Code e códigos numéricos</li>
+            <li>Integração com notificações inteligentes e WhatsApp</li>
+            <li>Suporte especializado ESPX na implantação e pós-venda</li>
+          </ul>
+          <p class="kpi">
+            🛡 Solução desenhada para durar anos, com o mínimo de intervenção.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ROI / DINHEIRO E TEMPO -->
+  <section>
+    <div class="container">
+      <h2 class="sec-title">💰 O que o condomínio ganha (além de paz na portaria)</h2>
+      <p class="sec-sub">
+        A conta vai muito além de “comprar um armário”. Você passa a ter <b>tempo do porteiro liberado, menos risco e mais satisfação dos moradores</b>.
+      </p>
+
+      <div class="roi-grid">
+        <div class="card">
+          <h3>⏱ Tempo devolvido para a portaria</h3>
+          <div class="roi-list">
+            <ul>
+              <li>Porteiro deixa de parar dezenas de vezes ao dia para lidar com pacote</li>
+              <li>Menos chamadas no interfone apenas para “avisar que chegou entrega”</li>
+              <li>Menos discussões sobre quem recebeu ou onde colocou a encomenda</li>
+            </ul>
+            <p class="kpi">
+              Em condomínios com alto volume de entregas, o XLocker representa horas de trabalho da portaria devolvidas todo mês.
+            </p>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>⚖ Menos risco, mais valor percebido</h3>
+          <div class="roi-list">
+            <ul>
+              <li>Menos risco de extravio e conflitos com moradores</li>
+              <li>Menos exposição do condomínio a possíveis questionamentos formais</li>
+              <li>Percepção de condomínio moderno e bem administrado</li>
+            </ul>
+            <div class="roi-pill">
+              ✅ Síndico deixa de “apagar incêndio” e passa a apresentar solução concreta.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROVA SOCIAL -->
+  <section>
+    <div class="container">
+      <h2 class="sec-title">⭐ O que síndicos e administradores enxergam depois de instalar</h2>
+      <p class="sec-sub">Relatos típicos de quem convivia com o caos de encomendas e decidiu profissionalizar a portaria.</p>
+
+      <div class="testimonials">
+        <div class="testi">
+          “Tínhamos encomenda até em cima do bebedouro. Depois do XLocker, tudo ficou organizado e as reclamações praticamente sumiram.”
+          <strong>João R. · Síndico</strong>
+          <small>Condomínio residencial com alto volume de entregas diárias.</small>
+        </div>
+        <div class="testi">
+          “Os porteiros deixaram de perder tempo com pacote e passaram a focar na segurança. Os moradores elogiam o sistema todo dia.”
+          <strong>Patrícia L. · Síndica</strong>
+          <small>Condomínio-clube com grande fluxo de pessoas e encomendas.</small>
+        </div>
+        <div class="testi">
+          “Do ponto de vista de administração, é uma solução que organiza, reduz risco e melhora a imagem do condomínio frente aos moradores.”
+          <strong>R. Santos · Administradora de Condomínios</strong>
+          <small>Atua com vários condomínios na mesma região.</small>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA ESTUDO GRÁTIS -->
+  <section>
+    <div class="container">
+      <div class="card" style="background:#0f172a;color:#e5e7eb;border-color:#111827;">
+        <h3 style="color:#f9fafb;">Quer saber se o XLocker faz sentido para o seu prédio?</h3>
+        <p style="font-size:14px;margin-top:4px;">
+          Faça um <b>estudo rápido e gratuito</b> com a ESPX.  
+          Em poucos passos vamos indicar o modelo ideal de XLocker para o seu condomínio,
+          considerando volume de encomendas, espaço disponível e perfil dos moradores.
+        </p>
+        <div style="margin-top:10px;display:flex;flex-wrap:wrap;gap:10px;">
+          <a class="btn" href="https://wa.me/5521935005738?text=Quero%20um%20estudo%20gratuito%20do%20XLocker%20para%20meu%20condom%C3%ADnio" target="_blank" rel="noopener noreferrer">
+            📊 Quero meu estudo gratuito agora
+          </a>
+          <a class="btn-o" href="#form">
+            Prefiro preencher o formulário
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FORMULÁRIO RÁPIDO -->
+  <section id="form">
+    <div class="container">
+      <div class="form-wrap">
+        <div class="form-head">
+          <h2>Solicite uma análise para o seu condomínio</h2>
+          <p>
+            Preencha em menos de 1 minuto. Nossa equipe vai analisar seu cenário e 
+            <b>retornar com sugestão de modelo, investimento estimado e próximos passos</b>.
+          </p>
+        </div>
+
+        <form id="leadForm">
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="nome">Seu nome*</label>
+              <input id="nome" name="nome" required placeholder="Ex.: Ana Silva" />
+            </div>
+            <div class="form-group">
+              <label for="perfil">Você é*</label>
+              <select id="perfil" name="perfil" required>
+                <option value="">Selecione…</option>
+                <option>Síndico(a)</option>
+                <option>Subsíndico / Conselho</option>
+                <option>Administrador(a) de Condomínio</option>
+                <option>Gestor(a) de Empresa</option>
+                <option>Responsável por Academia / Hotel / Coworking</option>
+                <option>Morador(a) indicando solução</option>
+                <option>Outro</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="condominio">Condomínio / Empresa*</label>
+              <input id="condominio" name="condominio" required placeholder="Nome do condomínio ou empresa" />
+            </div>
+            <div class="form-group">
+              <label for="cidade">Cidade / Bairro*</label>
+              <input id="cidade" name="cidade" required placeholder="Ex.: Niterói — Icaraí" />
+            </div>
+
+            <div class="form-group">
+              <label for="whats">WhatsApp*</label>
+              <input id="whats" name="whats" required placeholder="(DDD) 9 9999-9999" />
+            </div>
+            <div class="form-group">
+              <label for="tipo">Tipo de interesse*</label>
+              <select id="tipo" name="tipo" required>
+                <option value="">Selecione…</option>
+                <option>Condomínio residencial</option>
+                <option>Condomínio comercial</option>
+                <option>Empresa / Indústria</option>
+                <option>Academia</option>
+                <option>Hotel / Pousada</option>
+                <option>Coworking</option>
+                <option>Outro tipo de espaço</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group" style="margin-bottom:6px;">
+            <label for="detalhes">Conte rapidamente o que acontece hoje na portaria</label>
+            <textarea id="detalhes" name="detalhes" placeholder="Volume aproximado de encomendas por dia, principais problemas (filas, extravios, reclamações)…"></textarea>
+          </div>
+
+          <div class="consent">
+            <input id="lgpd" type="checkbox" required />
+            <label for="lgpd">
+              Li e <b>aceito a</b>
+              <a href="politica_privacidade_clientes_leads.html" target="_blank" rel="noopener noreferrer">Política de Privacidade</a>,
+              autorizando o uso dos meus dados para contato comercial sobre o XLocker.
+            </label>
+          </div>
+
+          <div class="form-actions">
+            <button type="submit" class="btn">
+              📩 Enviar e receber análise do XLocker
+            </button>
+            <div class="form-note">
+              Atendemos síndicos, administradoras e gestores que querem profissionalizar a portaria.
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- OUTROS SEGMENTOS -->
+  <section>
+    <div class="container">
+      <h2 class="sec-title">Outros usos inteligentes do XLocker</h2>
+      <p class="sec-sub">Além de resolver o caos de encomendas em condomínios, o XLocker também funciona muito bem em outros ambientes:</p>
+
+      <div class="grid-3">
+        <div class="card">
+          <h3>🏋️ Academias & clubes</h3>
+          <p>Guarda-volumes seguro para alunos e sócios, retirada de produtos da loja e lockers para itens pessoais sem risco de perda.</p>
+        </div>
+        <div class="card">
+          <h3>🏢 Empresas & coworkings</h3>
+          <p>Troca de equipamentos entre equipes, logística interna e entrega de documentos com rastreabilidade e horários flexíveis.</p>
+        </div>
+        <div class="card">
+          <h3>🏨 Hotéis, hostels & farmácias</h3>
+          <p>Armários para malas, objetos esquecidos, retirada de compras online e pedidos de farmácia com autonomia total do usuário.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INFO FINAL -->
+  <section>
+    <div class="container">
+      <p class="info">
+        A ESPX não entrega apenas lockers. Entrega <b>projeto completo</b>: análise do espaço, definição de módulos, tecnologia, 
+        experiência do usuário, treinamento e suporte.  
+        Se o seu condomínio sofre com encomendas, o XLocker é o passo concreto para mudar esse cenário.
+      </p>
+    </div>
+  </section>
+
+  <!-- STICKY CTA -->
+  <div class="sticky-bar">
+    <div class="sticky-inner">
+      <div class="sticky-text">
+        Portaria desorganizada custa caro em tempo, paz e reputação. <b>Leve o XLocker para o seu condomínio.</b>
+      </div>
+      <a class="btn" href="https://wa.me/5521935005738?text=Quero%20saber%20como%20implantar%20o%20XLocker%20no%20meu%20condom%C3%ADnio" target="_blank" rel="noopener noreferrer">
+        💬 Falar agora no WhatsApp
+      </a>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container" style="padding:18px 0 28px;font-size:12px;color:#6b7280;text-align:center;">
+      ©2025 ESPX · XLocker — Armários Inteligentes para Condomínios e Empresas
+    </div>
+  </footer>
+
+  <script>
+    // Monta texto para WhatsApp a partir do formulário
+    function buildWAText(data){
+      const lines = [
+        'Olá! Quero uma análise do XLocker para o meu espaço.',
+        '',
+        'Dados do contato:',
+        `Nome: ${data.nome}`,
+        `Perfil: ${data.perfil}`,
+        `Condomínio/Empresa: ${data.condominio}`,
+        `Cidade/Bairro: ${data.cidade}`,
+        `WhatsApp informado: ${data.whats}`,
+        `Tipo de interesse: ${data.tipo}`,
+        data.detalhes ? '' : '',
+        data.detalhes ? 'Contexto da portaria / problemas atuais:' : '',
+        data.detalhes ? data.detalhes : ''
+      ].filter(Boolean);
+
+      return encodeURIComponent(lines.join('\\n'));
+    }
+
+    document.getElementById('leadForm').addEventListener('submit', function (ev){
+      ev.preventDefault();
+
+      if(!document.getElementById('lgpd').checked){
+        alert('Para continuar, confirme o consentimento (LGPD).');
+        return;
+      }
+
+      const data = {
+        nome: document.getElementById('nome').value.trim(),
+        perfil: document.getElementById('perfil').value.trim(),
+        condominio: document.getElementById('condominio').value.trim(),
+        cidade: document.getElementById('cidade').value.trim(),
+        whats: document.getElementById('whats').value.trim(),
+        tipo: document.getElementById('tipo').value.trim(),
+        detalhes: document.getElementById('detalhes').value.trim()
+      };
+
+      const waBase = 'https://wa.me/5521935005738?text=';
+      window.location.href = waBase + buildWAText(data);
+    });
+  </script>
+</body>
+</html>
