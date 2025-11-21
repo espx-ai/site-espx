@@ -62,7 +62,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
   <title>XLocker | Acabe com o caos de encomendas na portaria do seu condomínio</title>
   <meta name="description" content="O XLocker acaba com filas, extravios e caos na portaria. Armários inteligentes com notificações automáticas, segurança total e estudo gratuito do modelo ideal para o seu condomínio." />
-
+ <link rel="icon" href="logoX.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -925,5 +925,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   </script>
 </body>
 </html>
+
 
 
