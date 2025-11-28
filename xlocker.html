@@ -229,6 +229,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       margin-top:4px;
       display:block;
     }
+
+    /* HERO MEDIA + SLIDER */
     .hero-media{
       position:relative;
       border-radius:20px;
@@ -239,8 +241,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       align-items:center;
       justify-content:center;
     }
-    .hero-media img{
-      max-width:82%;
+    .slider{
+      width:100%;
+      height:100%;
+      position:absolute;
+      top:0;
+      left:0;
+      display:flex;
+      transition:transform .7s ease-in-out;
+    }
+    .slider img{
+      width:100%;
+      flex-shrink:0;
+      object-fit:cover;
     }
     .hero-media-badge{
       position:absolute;
@@ -569,9 +582,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           <small>Resposta rápida via WhatsApp para síndicos, administradoras e conselhos.</small>
         </div>
 
+        <!-- HERO SLIDER -->
         <div class="hero-media">
-          <!-- Troque para uma foto real do XLocker se tiver -->
-          <img src="armarios-real.png" alt="Armário inteligente XLocker instalado em condomínio" />
+          <div class="slider">
+            <img src="armarios-real.png" alt="Armário inteligente XLocker instalado em condomínio 1" />
+            <img src="armarios-real-2.png" alt="Armário inteligente XLocker instalado em condomínio 2" />
+            <img src="armarios-real-3.png" alt="Armário inteligente XLocker instalado em condomínio 3" />
+          </div>
           <div class="hero-media-badge">
             🔒 24h de segurança & organização para todas as encomendas do prédio
           </div>
@@ -884,6 +901,21 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   </footer>
 
   <script>
+    // Slider automático de imagens no hero
+    (function(){
+      const slider = document.querySelector('.slider');
+      if (!slider) return;
+      const totalSlides = slider.children.length;
+      if (totalSlides <= 1) return;
+      let slideIndex = 0;
+      setInterval(function(){
+        slideIndex = (slideIndex + 1) % totalSlides;
+        slider.style.transform = 'translateX(-' + (slideIndex * 100) + '%)';
+      }, 3000);
+    })();
+  </script>
+
+  <script>
     // Monta texto para WhatsApp a partir do formulário
     function buildWAText(data){
       const lines = [
@@ -901,7 +933,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         data.detalhes ? data.detalhes : ''
       ].filter(Boolean);
 
-      return encodeURIComponent(lines.join('\\n'));
+      return encodeURIComponent(lines.join('\n'));
     }
 
     document.getElementById('leadForm').addEventListener('submit', function (ev){
