@@ -39,8 +39,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </script>
   <!-- Google tag (gtag.js) event - delayed navigation helper -->
 <script>
-  // Helper function to delay opening a URL until a gtag event is sent.
-  // Call it in response to an action that should navigate to a URL.
   function gtagSendEvent(url) {
     var callback = function () {
       if (typeof url === 'string') {
@@ -50,7 +48,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     gtag('event', 'click', {
       'event_callback': callback,
       'event_timeout': 2000,
-      // <event_parameters>
     });
     return false;
   }
@@ -171,7 +168,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       box-shadow:var(--shadow2);
       border:1px solid rgba(0,0,0,.06);
       display:grid;
-      grid-template-columns:1.1fr .9fr; /* volta ao original */
+      grid-template-columns:1.1fr 1.6fr; /* imagem com mais largura */
       gap:28px;
       padding:28px 26px;
       align-items:center;
@@ -236,23 +233,18 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       border-radius:20px;
       overflow:hidden;
       background:radial-gradient(circle at 0 0,#4f46e5,#111827);
-      width:140%;       /* aumenta só a largura */
-      margin-left:-20%; /* recentraliza no grid */
-    }
-
-    /* força o container a ficar sempre 16:9 (horizontal) */
-    .hero-media::before{
-      content:"";
-      display:block;
-      padding-top:56.25%; /* 16 / 9 -> formato paisagem */
+      aspect-ratio:16 / 9;
+      max-height:360px;
+      width:100%;
     }
 
     .slider{
-      position:absolute;
-      inset:0;            /* top:0; right:0; bottom:0; left:0; */
-      display:flex;
       width:100%;
       height:100%;
+      position:absolute;
+      top:0;
+      left:0;
+      display:flex;
       transition:transform .7s ease-in-out;
     }
 
@@ -260,7 +252,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       width:100%;
       height:100%;
       flex-shrink:0;
-      object-fit:cover;   /* preenche horizontal cortando só o excesso */
+      object-fit:cover;
     }
 
     .hero-media-badge{
@@ -351,7 +343,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     .kpi span{
       display:block;
       font-size:11px;
-      color:var(--g500);
+      color:#g500;
       font-weight:400;
       margin-top:3px;
     }
